@@ -3,24 +3,24 @@
 {% block header %}
 <header>
     <div class="container">
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a href="#"><img class="imglogo" src="{{ asset('bundles/family/images/family.png') }}"></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Phone</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Timer</a></li>
-                <li><a href="#">Map</a></li>
-            </ul>
+        <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a href="#"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}"></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Timer</a></li>
+                    <li><a href="#">Map</a></li>
+                </ul>
 
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#">Phone</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Timer</a></li>
-                <li><a href="#">Map</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Timer</a></li>
+                    <li><a href="#">Map</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
     </div>
 </header>
 {% endblock %}
@@ -35,20 +35,18 @@
             <a href=""><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt=""></a>
             <a href=""><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt=""></a><br>
         </div>
-    </div>
-
+    </div><br>
 {% endblock %}
 
 {% block footer %}
-
 <div class="container">
-<div class="light-blue lighten-1">
-    <div class="container center-align">
-        © 2016 Copyright all rights reserved - design by
-        <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="purple-text text-darken-4">
+    <div class="light-blue lighten-1">
+        <div class="container center-align">
+            © 2016 Copyright all rights reserved - design by
+            <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="purple-text text-darken-4">
             <span id="wild">&nbsp; Wild Code School.</span></a>
-        <a href="" class="purple-text text-darken-4"><span id="">&nbsp; Mention Légales.</span></a>
+            <a href="" class="purple-text text-darken-4"><span id="">&nbsp; Mention Légales.</span></a>
+        </div>
     </div>
-</div>
 </div>
 {% endblock %}

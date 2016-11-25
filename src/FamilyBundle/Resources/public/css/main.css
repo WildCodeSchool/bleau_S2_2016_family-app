@@ -16,11 +16,6 @@ body
     /*background: url("../images/userl.png") no-repeat center fixed; */
 }
 
-.imglogo
-{
-    width: 65px;
-    height:65px;
-}
 .imgmenu
 {
     width: 100px;
@@ -29,4 +24,35 @@ body
 .imgwall
 {
     background: url("../images/userl.png") no-repeat center fixed;
+}
+
+nav{
+    background-color: orange !important;
+}
+.nav_bar_logo, .nav_bar_burger{
+    height: 100%;
+}
+.nav_bar_logo img, .nav_bar_burger img{
+    height:100%;
+}
+
+/* Vue responsive */
+@media screen and (max-width: 992px) {
+    .button-collapse{
+        float: right !important;
+        margin-right: 10px;
+    }
+    .nav_bar_logo{
+        position: initial !important;
+        display: initial !important;
+    }
+    .titre_reponsive{
+        display: initial !important;
+    }
+    nav{
+        background-color: white !important;
+    }
+    nav a{
+        color: black !important;
+    }
 }
