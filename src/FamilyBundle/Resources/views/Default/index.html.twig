@@ -2,6 +2,7 @@
 
 {% block header %}
 <header>
+    <div class="container">
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a href="#"><img class="imglogo" src="{{ asset('bundles/family/images/family.png') }}"></a>
             <ul class="right hide-on-med-and-down">
@@ -20,6 +21,7 @@
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+    </div>
 </header>
 {% endblock %}
 
@@ -39,13 +41,14 @@
 
 {% block footer %}
 
-
+<div class="container">
 <div class="light-blue lighten-1">
-    <div class="container">
+    <div class="container center-align">
         © 2016 Copyright all rights reserved - design by
-        <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="orange-text text-lighten-3">
+        <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="purple-text text-darken-4">
             <span id="wild">&nbsp; Wild Code School.</span></a>
-        <a href="" class="orange-text text-lighten-3"><span id="">&nbsp; Mention Légales.</span></a>
+        <a href="" class="purple-text text-darken-4"><span id="">&nbsp; Mention Légales.</span></a>
     </div>
+</div>
 </div>
 {% endblock %}
