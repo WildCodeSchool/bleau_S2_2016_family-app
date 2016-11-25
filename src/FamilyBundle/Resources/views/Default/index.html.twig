@@ -1,14 +1,51 @@
-{% extends 'base.html.twig' %}
+{%extends 'base.html.twig'%}
 
 {% block header %}
 <header>
-   Menu Test
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a href="#"><img class="imglogo" src="{{ asset('bundles/family/images/family.png') }}"></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Timer</a></li>
+                <li><a href="#">Map</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Timer</a></li>
+                <li><a href="#">Map</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
 </header>
 {% endblock %}
 
 
-{% block footer %}
-<footer>
+{% block body %}
+    <h3 class="center-align">Family App Body</h3>
+    <div class="container center-align"><br><br>
+        <div class="row">
+            <a href=""><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt=""></a>
+            <a href=""><img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt=""></a><br>
+            <a href=""><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt=""></a>
+            <a href=""><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt=""></a><br>
+        </div>
+    </div>
 
-</footer>
+{% endblock %}
+
+{% block footer %}
+
+
+<div class="light-blue lighten-1">
+    <div class="container">
+        © 2016 Copyright all rights reserved - design by
+        <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="orange-text text-lighten-3">
+            <span id="wild">&nbsp; Wild Code School.</span></a>
+        <a href="" class="orange-text text-lighten-3"><span id="">&nbsp; Mention Légales.</span></a>
+    </div>
+</div>
 {% endblock %}

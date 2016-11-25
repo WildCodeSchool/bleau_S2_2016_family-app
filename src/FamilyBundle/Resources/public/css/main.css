@@ -1,0 +1,32 @@
+/*----- INDEX  ------
+//
+// 1. IMAGE
+// 2.
+// 3.
+// 4.
+---------------------*/
+
+/************************************
+*                                   *
+*            1. IMAGE               *
+*                                   *
+************************************/
+body
+{
+    /*background: url("../images/userl.png") no-repeat center fixed; */
+}
+
+.imglogo
+{
+    width: 65px;
+    height:65px;
+}
+.imgmenu
+{
+    width: 100px;
+    height: 100px;
+}
+.imgwall
+{
+    background: url("../images/userl.png") no-repeat center fixed;
+}
