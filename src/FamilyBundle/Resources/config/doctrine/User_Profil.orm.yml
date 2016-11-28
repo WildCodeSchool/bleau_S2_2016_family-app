@@ -1,0 +1,50 @@
+FamilyBundle\Entity\User_Profil:
+    type: entity
+    table: null
+    repositoryClass: FamilyBundle\Repository\User_ProfilRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            column: Nom
+        prenom:
+            type: string
+            length: 255
+            column: Prenom
+        tel03:
+            type: string
+            length: 255
+            nullable: true
+            column: Tel_03
+        tel06:
+            type: string
+            length: 255
+            nullable: true
+            column: Tel_06
+        tel09:
+            type: string
+            length: 255
+            nullable: true
+            column: Tel_09
+        adresse:
+            type: string
+            length: 255
+            column: Adresse
+        codePostal:
+            type: string
+            length: 255
+            column: Code_Postal
+        ville:
+            type: string
+            length: 255
+            column: Ville
+        anniversaire:
+            type: date
+            column: Anniversaire
+    lifecycleCallbacks: {  }

@@ -1,0 +1,20 @@
+FamilyBundle\Entity\Images:
+    type: entity
+    table: null
+    repositoryClass: FamilyBundle\Repository\ImagesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        source:
+            type: string
+            length: 255
+            column: Source
+        alt:
+            type: string
+            length: 255
+            column: Alt
+    lifecycleCallbacks: {  }
