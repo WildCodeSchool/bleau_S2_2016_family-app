@@ -1,7 +1,7 @@
-FamilyBundle\Entity\User_Profil:
+FamilyBundle\Entity\User:
     type: entity
     table: null
-    repositoryClass: FamilyBundle\Repository\User_ProfilRepository
+    repositoryClass: FamilyBundle\Repository\UserRepository
     id:
         id:
             type: integer

@@ -2,16 +2,13 @@
 
 namespace FamilyBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 /**
  * User_Profil
  */
-class User_Profil
+class User extends BaseUser
 {
-    /**
-     * @var int
-     */
-    private $id;
-
+    
     /**
      * @var string
      */
