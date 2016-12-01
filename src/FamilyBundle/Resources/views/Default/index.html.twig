@@ -6,17 +6,17 @@
         <nav class="light-blue lighten-1" role="navigation">
             <div class="nav-wrapper container"><a href="#"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}"></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Phone</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Timer</a></li>
-                    <li><a href="#">Map</a></li>
+                    {#<li><a href="{{ path('') }}">Phone</a></li>#}
+                    {#<li><a href="{{ path('') }}">Calendar</a></li>#}
+                    {#<li><a href="{{ path('') }}">Timer</a></li>#}
+                    {#<li><a href="{{ path('') }}">Map</a></li>#}
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Phone</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Timer</a></li>
-                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Phone</a></li><br>
+                    <li><a href="#">Calendar</a></li><br>
+                    <li><a href="#">Timer</a></li><br>
+                    <li><a href="#">Map</a></li><br>
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
@@ -27,6 +27,14 @@
 
 
 {% block body %}
+    <div>
+        <a href="https://panels.scotch.io/" class="profile-spot no-border bottom">
+            <span class="img" style="background-image: url(&#39;/img/spot-panels.png&#39;);"></span>
+            <span class="text">Panels</span>
+        </a>
+    </div>
+    <div class="loader" loader="" style="display: none;"></div>
+    {#<div class="join_view ng-scope">#}
     <h3 class="center-align">Family App Body</h3>
     <div class="container center-align"><br><br>
         <div class="row">
@@ -35,11 +43,11 @@
             <a href=""><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt=""></a>
             <a href=""><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt=""></a><br>
         </div>
-    </div><br>
+    </div></div>
 {% endblock %}
 
 {% block footer %}
-<div class="container">
+{#<div class="container">#}
     <div class="light-blue lighten-1">
         <div class="container center-align">
             © 2016 Copyright all rights reserved - design by

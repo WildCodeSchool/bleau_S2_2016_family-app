@@ -1,3 +1,9 @@
 family_homepage:
     path:     /homepage
     defaults: { _controller: FamilyBundle:Default:index }
+
+family_phone:
+    path:     /homepage/phone
+    defaults: { _controller: FamilyBundle:phone:index }
+
+
