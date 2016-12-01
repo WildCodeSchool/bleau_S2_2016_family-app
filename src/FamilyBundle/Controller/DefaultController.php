@@ -10,4 +10,31 @@ class DefaultController extends Controller
     {
         return $this->render('FamilyBundle:Default:index.html.twig');
     }
+
+    public function phoneAction()
+    {
+        return $this->render('@Family/Default/phone.html.twig');
+    }
+
+    public function calendarAction()
+    {
+        return $this->render('@Family/Default/calendar.html.twig');
+    }
+
+    public function timeAction()
+    {
+        return $this->render('@Family/Default/time.html.twig');
+    }
+
+    public function mapAction()
+    {
+        return $this->render('@Family/Default/map.html.twig');
+    }
+
+    public function layoutAction()
+    {
+        return $this->render('@Family/Default/layout.html.twig');
+
+    }
+
 }

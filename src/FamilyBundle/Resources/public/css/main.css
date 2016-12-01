@@ -11,10 +11,16 @@
 *            1. IMAGE               *
 *                                   *
 ************************************/
-body
-{
-    /*background: url("../images/userl.png") no-repeat center fixed; */
-}
+
+/*body {*/
+    /*display: flex;*/
+    /*min-height: 100vh;*/
+    /*flex-direction: column;*/
+/*}*/
+
+/*main {*/
+    /*flex: 10 auto;*/
+/*}*/
 
 .imgmenu
 {
@@ -27,7 +33,7 @@ body
 }
 
 nav{
-    background-color: orange !important;
+    /*background-color: orange !important;*/
 }
 .nav_bar_logo, .nav_bar_burger{
     height: 100%;
@@ -35,6 +41,12 @@ nav{
 .nav_bar_logo img, .nav_bar_burger img{
     height:100%;
 }
+
+
+.brand-logo {
+ color:white !important;
+}
+
 
 /* Vue responsive */
 @media screen and (max-width: 992px) {
@@ -49,10 +61,10 @@ nav{
     .titre_reponsive{
         display: initial !important;
     }
-    nav{
-        background-color: white !important;
-    }
-    nav a{
-        color: black !important;
-    }
-}
+    /*nav{*/
+        /*background-color: purple !important;*/
+    /*}*/
+    /*nav a{*/
+        /*color: white !important;*/
+    /*}*/
+/*}*/
