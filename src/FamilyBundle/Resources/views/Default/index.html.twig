@@ -3,8 +3,8 @@
 {% block header %}
 <header>
 
-        <nav role="navigation">
-            <div class="nav-wrapper container"><a href="#"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}"></a>
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container"><a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ path('family_phone') }}">Phone</a></li>
                     <li><a href="{{ path('family_calendar') }}">Calendar</a></li>
@@ -29,7 +29,7 @@
 {% block body %}
 
     <div class="loader" loader="" style="display: none;"></div>
-    <div class="join_view ng-scope">
+    <div class="join_view ng-scope"><br>
     <h3 class="center-align">Family App Body</h3>
     <div class="container center-align"><br><br>
         <div class="row">
@@ -55,10 +55,10 @@
             <a href="" class="purple-text text-darken-4"><span id="">&nbsp; Mention Légales.</span></a>
         </div>
     </div>
-    <div>
-        <a href="https://panels.scotch.io/" class="profile-spot no-border bottom">
-            <span class="img" style="background-image: url({{ asset('bundles/family/images/phone.png') }});"></span>
-        </a>
-    </div>
+    {#<div>#}
+        {#<a href="https://panels.scotch.io/" class="profile-spot no-border bottom">#}
+            {#<span class="img" style="background-image: url({{ asset('bundles/family/images/phone.png') }});"></span>#}
+        {#</a>#}
+    {#</div>#}
 </div>
 {% endblock %}
