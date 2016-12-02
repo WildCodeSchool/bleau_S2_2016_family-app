@@ -18,6 +18,10 @@ family_map:
     path:     /map
     defaults: { _controller: FamilyBundle:Default:map}
 
+family_mention:
+    path:     /mention
+    defaults: { _controller: FamilyBundle:Default:mention}
+
 family_layout:
     path:     /
     defaults: { _controller: FamilyBundle:Default:layout}

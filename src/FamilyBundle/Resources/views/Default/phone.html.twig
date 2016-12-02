@@ -1,19 +1,45 @@
 {%extends 'base.html.twig'%}
 
-{% block stylesheet%}
 
-{% endblock %}
-{% block header %}
-
-
-{% endblock %}
 
 {% block body %}
 
-    test 1 phone
-{% endblock %}
+    <h1>test 1 phone</h1>
 
-{% block footer %}
+    <table class="bordered highlight responsive-table centered">
+        <thead>
+        <tr>
+            <th data-field="id">Nom</th>
+            <th data-field="name">Prenon</th>
+            <th data-field="price">Tel 03</th>
+            <th data-field="price">Tel 06</th>
+            <th data-field="price">Tel 09</th>
+        </tr>
+        </thead>
 
+        <tbody>
+        <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+    </table>
 
 {% endblock %}

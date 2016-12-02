@@ -1,30 +1,5 @@
 {%extends 'base.html.twig'%}
 
-{% block header %}
-<header>
-
-        <nav class="white" role="navigation">
-            <div class="nav-wrapper container"><a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ path('family_phone') }}">Phone</a></li>
-                    <li><a href="{{ path('family_calendar') }}">Calendar</a></li>
-                    <li><a href="{{ path('family_time') }}">Timer</a></li>
-                    <li><a href="{{ path('family_map') }}">Map</a></li>
-                </ul>
-
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="{{ path('family_phone') }}">Phone</a></li><br>
-                    <li><a href="{{ path('family_calendar') }}">Calendar</a></li><br>
-                    <li><a href="{{ path('family_time') }}">Timer</a></li><br>
-                    <li><a href="{{ path('family_map') }}">Map</a></li><br>
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-
-</header>
-{% endblock %}
-
 
 {% block body %}
 
@@ -42,23 +17,6 @@
 
             <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map"></a><br>
         </div>
-    </div><br><br>
+    </div>
 {% endblock %}
 
-{% block footer %}
-<div class="container">
-    {#<div class="light-blue lighten-1">#}
-        <div class="container center-align">
-            © 2016 Copyright all rights reserved - design by
-            <a href="{{ asset('http://www.wildcodeschool.fr') }}" class="purple-text text-darken-4">
-            <span id="wild">&nbsp; Wild Code School.</span></a>
-            <a href="" class="purple-text text-darken-4"><span id="">&nbsp; Mention Légales.</span></a>
-        </div>
-    </div>
-    {#<div>#}
-        {#<a href="https://panels.scotch.io/" class="profile-spot no-border bottom">#}
-            {#<span class="img" style="background-image: url({{ asset('bundles/family/images/phone.png') }});"></span>#}
-        {#</a>#}
-    {#</div>#}
-</div>
-{% endblock %}
