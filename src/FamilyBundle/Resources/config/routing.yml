@@ -22,9 +22,9 @@ family_mention:
     path:     /mention
     defaults: { _controller: FamilyBundle:Default:mention}
 
-family_layout:
-    path:     /
-    defaults: { _controller: FamilyBundle:Default:layout}
+family_login:
+    path:     /login
+    defaults: { _controller: FamilyBundle:Security:login}
 
 #----------- FOS USER BUNDLE SECURITY -----------------------
 

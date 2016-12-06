@@ -35,11 +35,5 @@ class DefaultController extends Controller
     {
         return $this->render('@Family/Default/mention.html.twig');
     }
-    
-    public function layoutAction()
-    {
-        return $this->render('@Family/Default/layout.html.twig');
-
-    }
 
 }

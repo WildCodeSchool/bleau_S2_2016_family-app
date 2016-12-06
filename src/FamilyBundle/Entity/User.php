@@ -70,7 +70,7 @@ class User extends BaseUser
      *
      * @param string $nom
      *
-     * @return User_Profil
+     * @return User
      */
     public function setNom($nom)
     {
@@ -94,7 +94,7 @@ class User extends BaseUser
      *
      * @param string $prenom
      *
-     * @return User_Profil
+     * @return User
      */
     public function setPrenom($prenom)
     {
@@ -118,7 +118,7 @@ class User extends BaseUser
      *
      * @param string $tel03
      *
-     * @return User_Profil
+     * @return User
      */
     public function setTel03($tel03)
     {
@@ -142,7 +142,7 @@ class User extends BaseUser
      *
      * @param string $tel06
      *
-     * @return User_Profil
+     * @return User
      */
     public function setTel06($tel06)
     {
@@ -166,7 +166,7 @@ class User extends BaseUser
      *
      * @param string $tel09
      *
-     * @return User_Profil
+     * @return User
      */
     public function setTel09($tel09)
     {
@@ -190,7 +190,7 @@ class User extends BaseUser
      *
      * @param string $adresse
      *
-     * @return User_Profil
+     * @return User
      */
     public function setAdresse($adresse)
     {
@@ -214,7 +214,7 @@ class User extends BaseUser
      *
      * @param string $codePostal
      *
-     * @return User_Profil
+     * @return User
      */
     public function setCodePostal($codePostal)
     {
@@ -238,7 +238,7 @@ class User extends BaseUser
      *
      * @param string $ville
      *
-     * @return User_Profil
+     * @return User
      */
     public function setVille($ville)
     {
@@ -262,7 +262,7 @@ class User extends BaseUser
      *
      * @param \DateTime $anniversaire
      *
-     * @return User_Profil
+     * @return User
      */
     public function setAnniversaire($anniversaire)
     {
