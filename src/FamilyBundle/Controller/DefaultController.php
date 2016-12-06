@@ -8,7 +8,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FamilyBundle:Default:index.html.twig');
+        return $this->render('@Family/Default/index.html.twig');
     }
 
     public function phoneAction()

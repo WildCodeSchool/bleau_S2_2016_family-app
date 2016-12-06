@@ -2,6 +2,7 @@ family_homepage:
     path:     /homepage
     defaults: { _controller: FamilyBundle:Default:index }
 
+
 family_phone:
     path:     /phone
     defaults: { _controller: FamilyBundle:Default:phone}
@@ -23,7 +24,7 @@ family_mention:
     defaults: { _controller: FamilyBundle:Default:mention}
 
 family_login:
-    path:     /login
+    path:     /
     defaults: { _controller: FamilyBundle:Security:login}
 
 #----------- FOS USER BUNDLE SECURITY -----------------------
