@@ -1,0 +1,23 @@
+
+    <header>
+
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container"><a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ path('family_phone') }}">Phone</a></li>
+                    <li><a href="{{ path('family_calendar') }}">Calendar</a></li>
+                    <li><a href="{{ path('family_time') }}">Timer</a></li>
+                    <li><a href="{{ path('family_map') }}">Map</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="{{ path('family_phone') }}">Phone</a></li><br>
+                    <li><a href="{{ path('family_calendar') }}">Calendar</a></li><br>
+                    <li><a href="{{ path('family_time') }}">Timer</a></li><br>
+                    <li><a href="{{ path('family_map') }}">Map</a></li><br>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+    </header>

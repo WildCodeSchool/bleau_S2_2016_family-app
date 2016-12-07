@@ -1,9 +1,14 @@
 {%extends 'base.html.twig'%}
+{% block stylesheet%}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
 
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+{% endblock %}
 
 
 {% block body %}
-
+    {% include "@Family/Default/nav.html.twig"  %}
     <h1>test 1 phone</h1>
 
     <table class="bordered highlight responsive-table centered">
@@ -41,5 +46,5 @@
         </tr>
         </tbody>
     </table>
-
+    {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}

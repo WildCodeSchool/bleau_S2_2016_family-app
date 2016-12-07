@@ -145,3 +145,7 @@ a:active {
     text-align: center;
     background-color: #aaa;
 }
+
+.wall {
+    background-image: url("../images/userl.png") !important;
+}
