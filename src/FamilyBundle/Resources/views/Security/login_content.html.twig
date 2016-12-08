@@ -1,23 +1,45 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+<div class="container">
+    <div class="row"><br><br>
+        <a href="{{ path('fos_user_registration_register') }}"><h5>1- Enregistrez vous en cliquant ici :</h5></a><br><br>
+        <h5>2- Connectez vous :</h5> <br><br>
 
 <form action="{{ path("fos_user_security_check") }}" method="post">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
 
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+    <div class="row">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <label for="username">{{ 'security.login.username'|trans }}</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <label for="password">{{ 'security.login.password'|trans }}</label>
+                <input type="password" id="password" name="_password" required="required" />
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"  />
+    <label for="filled-in-box">{{ 'security.login.remember_me'|trans }}</label>
 
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
+    <input class="waves-effect waves-light btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
-<a href="{{ path('fos_user_registration_register') }}">Register</a>
+
+    </div>
+</div>
+{% endblock %}

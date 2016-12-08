@@ -2,9 +2,14 @@
 
 {% block body %}
     <div class="container">
-
+        <div class="wall">
 {% block fos_user_content %}
     {{ include('FOSUserBundle:Security:login_content.html.twig') }}
-    </div>
+    </div></div>
 {% endblock fos_user_content %}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 {% endblock %}

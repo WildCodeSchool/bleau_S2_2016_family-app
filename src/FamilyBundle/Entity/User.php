@@ -4,7 +4,7 @@ namespace FamilyBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 /**
- * User_Profil
+ * User
  */
 class User extends BaseUser
 {
