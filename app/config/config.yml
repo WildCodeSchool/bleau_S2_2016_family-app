@@ -73,3 +73,6 @@ fos_user:
     registration:
         form:
             type: FamilyBundle\Form\RegistrationFormType
+    profile:
+        form:
+            type: FamilyBundle\Form\ProfileFormType

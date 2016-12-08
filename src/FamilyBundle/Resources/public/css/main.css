@@ -147,5 +147,16 @@ a:active {
 }
 
 .wall {
-    background-image: url("../images/userl.png") !important;
+    /*background-image: url("../images/userl.png") !important;*/
+
+
+}
+
+.form {
+    margin: 40px auto;
+    padding: 10px 30px 35px;
+    display: block;
+    width: 100%;
+    background-color: #DEDCDC;
+    box-shadow: 0 0 25px 0 #000;
 }
