@@ -10,4 +10,9 @@
 {% block stylesheet %}
 {{ parent() }}
 <link rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+
+    <script>$('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });</script>
 {% endblock %}

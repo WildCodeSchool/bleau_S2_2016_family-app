@@ -4,47 +4,47 @@
 </div>
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 <div class="row form center">
-    <div class="col s6"><i class="material-icons prefix">account_circle</i>
+    <div class="col s6"><i class="material-icons prefix">verified_user</i>
 {{ form_label(form.username) }}
 {{ form_errors(form.username) }}
 {{ form_widget(form.username) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">email</i>
 {{ form_label(form.email) }}
 {{ form_errors(form.email) }}
 {{ form_widget(form.email) }}
     </div>
     <div class="col s6">
-{#{{ form_label(form.mot_de_passe) }}#}
-{#{{ form_errors(form.mot_de_passe) }}#}
-{#{{ form_widget(form.mot_de_passe) }}#}
+{#{{ form_label(form.mot de passe) }}#}
+{#{{ form_errors(form.mot de passe) }}#}
+{#{{ form_widget(form.mot de passe) }}#}
     </div>
     <div class="col s6">
 {#{{ form_label(form.confirmation mot de passe) }}#}
 {#{{ form_errors(form.confirmation mot de passe) }}#}
 {#{{ form_widget(form.confirmation mot de passe) }}#}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">account_circle</i>
 {{ form_label(form.nom) }}
 {{ form_errors(form.nom) }}
 {{ form_widget(form.nom) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">account_circle</i>
 {{ form_label(form.prenom) }}
 {{ form_errors(form.prenom) }}
 {{ form_widget(form.prenom) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">location_on</i>
 {{ form_label(form.adresse) }}
 {{ form_errors(form.adresse) }}
 {{ form_widget(form.adresse) }}
     </div>
-    <div class="col s6">
-{#{{ form_label(form.Code_Postal) }}#}
-{#{{ form_errors(form.Code_Postal) }}#}
-{#{{ form_widget(form.Code_Postal) }}#}
+    <div class="col s6"><i class="material-icons prefix">location_on</i>
+{{ form_label(form.code_postal) }}
+{{ form_errors(form.code_postal) }}
+{{ form_widget(form.code_postal) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">location_on</i>
 {{ form_label(form.ville) }}
 {{ form_errors(form.ville) }}
 {{ form_widget(form.ville) }}
@@ -54,17 +54,17 @@
 {{ form_errors(form.anniversaire) }}
 {{ form_widget(form.anniversaire) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">phone</i>
 {{ form_label(form.tel_03) }}
 {{ form_errors(form.tel_03) }}
 {{ form_widget(form.tel_03) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">phone</i>
 {{ form_label(form.tel_06) }}
 {{ form_errors(form.tel_06) }}
 {{ form_widget(form.tel_06) }}
     </div>
-    <div class="col s6">
+    <div class="col s6"><i class="material-icons prefix">phone</i>
 {{ form_label(form.tel_09) }}
 {{ form_errors(form.tel_09) }}
 {{ form_widget(form.tel_09) }}</div>
