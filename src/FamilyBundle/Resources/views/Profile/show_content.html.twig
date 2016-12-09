@@ -1,8 +1,27 @@
+
 {% trans_default_domain 'FOSUserBundle' %}
 
+<div class="container">
+
+<br>
+<h4>Votre Profile est :</h4>
+<br>
 
 <div class="family user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'Username' }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>{{ 'Nom' }}: {{ user.nom }}</p>
+    <p>{{ 'Prenom' }}: {{ user.prenom }}</p>
+    {#<p>{{ 'Tel_03' }}: {{ user.tel_03 }}</p>#}
+    {#<p>{{ 'Tel_06' }}: {{ user.tel_06 }}</p>#}
+    {#<p>{{ 'Tel_09' }}: {{ user.tel_09 }}</p>#}
+    <p>{{ 'Adresse' }}: {{ user.adresse }}</p>
+    {#<p>{{ 'Code Postal' }}: {{ user.code_postal }}</p>#}
+    <p>{{ 'Ville' }}: {{ user.ville }}</p>
+    {#<p>{{ 'Anniversaire' }}: {{ user.anniversaire }}</p>#}
 
 </div>
+<a href="edit_content.html.twig">Editer votre profile</a>
+</div>
+
+

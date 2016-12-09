@@ -75,4 +75,4 @@ fos_user:
             type: FamilyBundle\Form\RegistrationFormType
     profile:
         form:
-            type: FamilyBundle\Form\ProfileFormType
+            type: app_user_profile

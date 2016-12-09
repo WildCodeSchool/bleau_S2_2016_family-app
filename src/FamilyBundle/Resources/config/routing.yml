@@ -26,6 +26,14 @@ family_login:
     path:     /
     defaults: { _controller: FamilyBundle:Security:login}
 
+family_profile:
+    path:     /profile
+    defaults: { FamilyBundle:Form:profile}
+
+family_edit:
+    path:     /profile/edit
+    defaults: { FamilyBundle:Form:profile:edit}
+
 #----------- FOS USER BUNDLE SECURITY -----------------------
 
 

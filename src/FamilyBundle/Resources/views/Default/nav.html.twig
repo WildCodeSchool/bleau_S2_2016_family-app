@@ -8,20 +8,22 @@
                     <li><a href="{{ path('family_calendar') }}" class="btn">Calendar</a></li>
                     <li><a href="{{ path('family_time') }}" class="btn">Timer</a></li>
                     <li><a href="{{ path('family_map') }}" class="btn">Map</a></li>
-                    <li><a href="" class="btn">Profile</a></li>
+                    <li><a href="{{ path('fos_user_profile_show') }}" class="btn">Profile</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}" class="btn">Deconnection</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="side-nav">
+                <ul id="nav-mobile" class="side-nav center">
+                    <li><a href="">
+                    <img class="" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a></li><br><br>
                     <li><a href="{{ path('family_phone') }}">Phone</a></li><br>
                     <li><a href="{{ path('family_calendar') }}">Calendar</a></li><br>
                     <li><a href="{{ path('family_time') }}">Timer</a></li><br>
                     <li><a href="{{ path('family_map') }}">Map</a></li><br>
                     <li><a href="">Profile</a></li><br>
-                    <li><a href="">Deconnection</a></li><br>
-                    <li><a href="">Homepage</a></li><br>
+                    <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li><br>
+
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">Menu</i></a>
             </div>
         </nav>
 

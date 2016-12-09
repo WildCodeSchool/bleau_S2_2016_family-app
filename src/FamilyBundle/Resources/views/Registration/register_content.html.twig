@@ -15,14 +15,14 @@
 {{ form_widget(form.email) }}
     </div>
     <div class="col s6">
-{#{{ form_label(form.mot de passe) }}#}
-{#{{ form_errors(form.mot de passe) }}#}
-{#{{ form_widget(form.mot de passe) }}#}
+{{ form_label(form.plainPassword.first) }}
+{{ form_errors(form.plainPassword.first) }}
+{{ form_widget(form.plainPassword.first) }}
     </div>
     <div class="col s6">
-{#{{ form_label(form.confirmation mot de passe) }}#}
-{#{{ form_errors(form.confirmation mot de passe) }}#}
-{#{{ form_widget(form.confirmation mot de passe) }}#}
+{{ form_label(form.plainPassword.second) }}
+{{ form_errors(form.plainPassword.second) }}
+{{ form_widget(form.plainPassword.second) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">account_circle</i>
 {{ form_label(form.nom) }}
@@ -71,7 +71,7 @@
 
     </div>
 {{ form_widget(form) }}
-<div>
+<div class="col s6">
         <input class="waves-effect waves-light btn" type="submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 {{ form_end(form) }}
