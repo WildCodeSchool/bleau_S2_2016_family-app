@@ -1,15 +1,75 @@
 {% trans_default_domain 'FOSUserBundle' %}
-
+<div class="row center-align "><br>
+    <img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo">
+</div>
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-<div class="center">
+<div class="row form center">
+    <div class="col s6"><i class="material-icons prefix">account_circle</i>
+{{ form_label(form.username) }}
+{{ form_errors(form.username) }}
+{{ form_widget(form.username) }}
+    </div>
+    <div class="col s6">
+{{ form_label(form.email) }}
+{{ form_errors(form.email) }}
+{{ form_widget(form.email) }}
+    </div>
+    <div class="col s6">
+{#{{ form_label(form.mot_de_passe) }}#}
+{#{{ form_errors(form.mot_de_passe) }}#}
+{#{{ form_widget(form.mot_de_passe) }}#}
+    </div>
+    <div class="col s6">
+{#{{ form_label(form.confirmation mot de passe) }}#}
+{#{{ form_errors(form.confirmation mot de passe) }}#}
+{#{{ form_widget(form.confirmation mot de passe) }}#}
+    </div>
+    <div class="col s6">
 {{ form_label(form.nom) }}
 {{ form_errors(form.nom) }}
 {{ form_widget(form.nom) }}
-</div>
+    </div>
+    <div class="col s6">
+{{ form_label(form.prenom) }}
+{{ form_errors(form.prenom) }}
+{{ form_widget(form.prenom) }}
+    </div>
+    <div class="col s6">
+{{ form_label(form.adresse) }}
+{{ form_errors(form.adresse) }}
+{{ form_widget(form.adresse) }}
+    </div>
+    <div class="col s6">
+{#{{ form_label(form.Code_Postal) }}#}
+{#{{ form_errors(form.Code_Postal) }}#}
+{#{{ form_widget(form.Code_Postal) }}#}
+    </div>
+    <div class="col s6">
+{{ form_label(form.ville) }}
+{{ form_errors(form.ville) }}
+{{ form_widget(form.ville) }}
+    </div>
+    <div class="col s6">
 {{ form_label(form.anniversaire) }}
 {{ form_errors(form.anniversaire) }}
 {{ form_widget(form.anniversaire) }}
+    </div>
+    <div class="col s6">
+{{ form_label(form.tel_03) }}
+{{ form_errors(form.tel_03) }}
+{{ form_widget(form.tel_03) }}
+    </div>
+    <div class="col s6">
+{{ form_label(form.tel_06) }}
+{{ form_errors(form.tel_06) }}
+{{ form_widget(form.tel_06) }}
+    </div>
+    <div class="col s6">
+{{ form_label(form.tel_09) }}
+{{ form_errors(form.tel_09) }}
+{{ form_widget(form.tel_09) }}</div>
 
+    </div>
 {{ form_widget(form) }}
 <div>
         <input class="waves-effect waves-light btn" type="submit" value="{{ 'registration.submit'|trans }}" />

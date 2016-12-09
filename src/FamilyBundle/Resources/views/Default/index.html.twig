@@ -9,35 +9,47 @@
 
 
 {% block body %}
+
+<!--Ajout du lien interne vers la NavBar-->
 {% include "@Family/Default/nav.html.twig"  %}
-    <div class="loader" loader="" style="display: none;"></div>
-    <div class="join_view ng-scope"><br>
-    <h3 class="center-align">Family App Body</h3>
-    <div class="container center-align"><br><br>
-        <div class="row">
 
-            <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"></a>
+<div class="join_view ng-scope"><br>
+    <h3 class="center-align">Family App :</h3><br><h3>4 Fonctions pour organiser sa famille.</h3>
 
-            <a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar"></a><br>
-
-            <a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time"></a>
-
-            <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map"></a><br>
-        </div>
-    </div>
-
-
-        <div id="f1_container">
-            <div id="f1_card" class="shadow">
-                <div class="front face">
-                    <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"></a>
+        <div class="container center-align"><br><br>
+            <div class="row">
+                <div class="col s6">
+                    <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"><br>Phone :</a>
                 </div>
-                <div class="back face center">
-                    <p>This is nice for exposing more information about an image.</p>
-                    <p>Any content can go here.</p>
+                <div class="col s6">
+                    <a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar"><br>Calendar :</a>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col s6">
+                    <a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time"><br>Timer :</a>
+                </div>
+                <div class="col s6">
+                    <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map"><br>Map :</a>
                 </div>
             </div>
         </div>
-        {% include "@Family/Default/footer.html.twig"  %}
+</div>
+
+        {#<div id="f1_container">#}
+            {#<div id="f1_card" class="shadow">#}
+                {#<div class="front face">#}
+                    {#<a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"></a>#}
+                {#</div>#}
+                {#<div class="back face center">#}
+                    {#<p>This is nice for exposing more information about an image.</p>#}
+                    {#<p>Any content can go here.</p>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+
+<!--Ajout du lien interne vers le Footer-->
+{% include "@Family/Default/footer.html.twig"  %}
+
 {% endblock %}
 
