@@ -23,42 +23,30 @@
         </thead>
 
         <tbody>
-        <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
+        {% for user in phones %}
+            <tr>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.tel03 }}</td>
+                <td>{{ user.tel06 }}</td>
+                <td>{{ user.tel09 }}</td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
-{% block css2 %}
-    <footer class="footer-body" id="mobbern-footer-2">
-    <div class="page-width container">
+{#{% block css2 %}#}
+    {#<footer class="footer-body" id="mobbern-footer-2">#}
+    {#<div class="page-width container">#}
 
-    <div id="scroll-top">
-        <a id="scroll-top-button" class="scroll-link anim-250" href="" title="" data-original-title="Haut">
-            <img src="{{ asset('bundles/family/images/haut.png') }}">
-        </a>
-    </div>
-    </div></footer>
+    {#<div id="scroll-top">#}
+        {#<a id="scroll-top-button" class="scroll-link anim-250" href="" title="" data-original-title="Haut">#}
+            {#<img src="{{ asset('bundles/family/images/haut.png') }}">#}
+        {#</a>#}
+    {#</div>#}
+    {#</div></footer>#}
 
-    <link rel="stylesheet" href="{{ asset('bundles/family/css/mobbern.css') }}">
-{% endblock %}
+    {#<link rel="stylesheet" href="{{ asset('bundles/family/css/mobbern.css') }}">#}
+{#{% endblock %}#}
 
     {% include "@Family/Default/footer.html.twig"  %}
 

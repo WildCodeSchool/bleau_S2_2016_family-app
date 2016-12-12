@@ -10,18 +10,19 @@
 <div class="family user_show">
     <p>{{ 'Username' }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+
     <p>{{ 'Nom' }}: {{ user.nom }}</p>
     <p>{{ 'Prenom' }}: {{ user.prenom }}</p>
-    {#<p>{{ 'Tel_03' }}: {{ user.tel_03 }}</p>#}
-    {#<p>{{ 'Tel_06' }}: {{ user.tel_06 }}</p>#}
-    {#<p>{{ 'Tel_09' }}: {{ user.tel_09 }}</p>#}
+    <p>{{ 'Tel_03' }}: {{ user.tel03 }}</p>
+    <p>{{ 'Tel_06' }}: {{ user.tel06 }}</p>
+    <p>{{ 'Tel_09' }}: {{ user.tel09 }}</p>
     <p>{{ 'Adresse' }}: {{ user.adresse }}</p>
-    {#<p>{{ 'Code Postal' }}: {{ user.code_postal }}</p>#}
+    <p>{{ 'Code Postal' }}: {{ user.codepostal }}</p>
     <p>{{ 'Ville' }}: {{ user.ville }}</p>
-    {#<p>{{ 'Anniversaire' }}: {{ user.anniversaire }}</p>#}
+    <p>{{ 'Anniversaire' }}: {{ user.anniversaire|date("m/d/Y") }}</p>
 
 </div>
-<a href="edit_content.html.twig">Editer votre profile</a>
+<a href="{{ path('fos_user_profile_edit') }}">Editer votre profile</a>
 </div>
 
 

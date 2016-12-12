@@ -21,8 +21,6 @@ class ProfileFormType extends BaseType
 {
     public function buildUserForm(FormBuilderInterface $builder, array $options)
     {
-        parent::buildUserForm($builder,$options);
-
         $builder
             ->add('nom', null, array('label' => 'Nom'))
             ->add('prenom', null, array('label' => 'Prenom'))
@@ -33,14 +31,11 @@ class ProfileFormType extends BaseType
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
             ->add('anniversaire', null, array('label' => 'Anniversaire'));
-
-
-
     }
 
     public function getParent()
     {
-        return 'FOS\UserBundle\Form\Type\ProfileFormType';
+        return 'fos_user_profile';
     }
 
     public function getName()

@@ -5,74 +5,75 @@
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 <div class="row form center">
     <div class="col s6"><i class="material-icons prefix">verified_user</i>
-{{ form_label(form.username) }}
-{{ form_errors(form.username) }}
-{{ form_widget(form.username) }}
+        {{ form_label(form.username) }}
+        {{ form_errors(form.username) }}
+        {{ form_widget(form.username) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">email</i>
-{{ form_label(form.email) }}
-{{ form_errors(form.email) }}
-{{ form_widget(form.email) }}
+        {{ form_label(form.email) }}
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
     </div>
     <div class="col s6">
-{{ form_label(form.plainPassword.first) }}
-{{ form_errors(form.plainPassword.first) }}
-{{ form_widget(form.plainPassword.first) }}
+        {{ form_label(form.plainPassword.first) }}
+        {{ form_errors(form.plainPassword.first) }}
+        {{ form_widget(form.plainPassword.first) }}
     </div>
     <div class="col s6">
-{{ form_label(form.plainPassword.second) }}
-{{ form_errors(form.plainPassword.second) }}
-{{ form_widget(form.plainPassword.second) }}
+        {{ form_label(form.plainPassword.second) }}
+        {{ form_errors(form.plainPassword.second) }}
+        {{ form_widget(form.plainPassword.second) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">account_circle</i>
-{{ form_label(form.nom) }}
-{{ form_errors(form.nom) }}
-{{ form_widget(form.nom) }}
+        {{ form_label(form.nom) }}
+        {{ form_errors(form.nom) }}
+        {{ form_widget(form.nom) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">account_circle</i>
-{{ form_label(form.prenom) }}
-{{ form_errors(form.prenom) }}
-{{ form_widget(form.prenom) }}
+        {{ form_label(form.prenom) }}
+        {{ form_errors(form.prenom) }}
+        {{ form_widget(form.prenom) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">location_on</i>
-{{ form_label(form.adresse) }}
-{{ form_errors(form.adresse) }}
-{{ form_widget(form.adresse) }}
+        {{ form_label(form.adresse) }}
+        {{ form_errors(form.adresse) }}
+        {{ form_widget(form.adresse) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">location_on</i>
-{{ form_label(form.code_postal) }}
-{{ form_errors(form.code_postal) }}
-{{ form_widget(form.code_postal) }}
+        {{ form_label(form.code_postal) }}
+        {{ form_errors(form.code_postal) }}
+        {{ form_widget(form.code_postal) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">location_on</i>
-{{ form_label(form.ville) }}
-{{ form_errors(form.ville) }}
-{{ form_widget(form.ville) }}
+        {{ form_label(form.ville) }}
+        {{ form_errors(form.ville) }}
+        {{ form_widget(form.ville) }}
     </div>
     <div class="col s6">
-{{ form_label(form.anniversaire) }}
-{{ form_errors(form.anniversaire) }}
-{{ form_widget(form.anniversaire) }}
+        {{ form_label(form.anniversaire) }}
+        {{ form_errors(form.anniversaire) }}
+        {{ form_widget(form.anniversaire) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">phone</i>
-{{ form_label(form.tel_03) }}
-{{ form_errors(form.tel_03) }}
-{{ form_widget(form.tel_03) }}
+        {{ form_label(form.tel_03) }}
+        {{ form_errors(form.tel_03) }}
+        {{ form_widget(form.tel_03) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">phone</i>
-{{ form_label(form.tel_06) }}
-{{ form_errors(form.tel_06) }}
-{{ form_widget(form.tel_06) }}
+        {{ form_label(form.tel_06) }}
+        {{ form_errors(form.tel_06) }}
+        {{ form_widget(form.tel_06) }}
     </div>
     <div class="col s6"><i class="material-icons prefix">phone</i>
-{{ form_label(form.tel_09) }}
-{{ form_errors(form.tel_09) }}
-{{ form_widget(form.tel_09) }}</div>
+        {{ form_label(form.tel_09) }}
+        {{ form_errors(form.tel_09) }}
+        {{ form_widget(form.tel_09) }}
+    </div>
 
-    </div>
-{{ form_widget(form) }}
+</div>
+        {{ form_widget(form) }}
 <div class="col s6">
         <input class="waves-effect waves-light btn" type="submit" value="{{ 'registration.submit'|trans }}" />
-    </div>
-{{ form_end(form) }}
+</div>
+        {{ form_end(form) }}
 

@@ -11,10 +11,10 @@ class DefaultController extends Controller
         return $this->render('@Family/Default/index.html.twig');
     }
 
-    public function phoneAction()
-    {
-        return $this->render('@Family/Default/phone.html.twig');
-    }
+//    public function phoneAction()
+//    {
+//        return $this->render('@Family/Default/phone.html.twig');
+//    }
 
     public function calendarAction()
     {

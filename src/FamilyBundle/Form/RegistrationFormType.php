@@ -29,9 +29,6 @@ class RegistrationFormType extends AbstractType
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
             ->add('anniversaire', null, array('label' => 'Anniversaire'));
-
-
-
     }
 
     public function getParent()
