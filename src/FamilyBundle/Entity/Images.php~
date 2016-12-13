@@ -81,4 +81,3 @@ class Images
         return $this->alt;
     }
 }
-

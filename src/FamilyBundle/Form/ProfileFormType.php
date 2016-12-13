@@ -32,6 +32,7 @@ class ProfileFormType extends BaseType
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
             ->add('anniversaire', null, array('label' => 'Anniversaire'))
+            
             ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
                         'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
                         'options' => array('translation_domain' => 'FOSUserBundle'),

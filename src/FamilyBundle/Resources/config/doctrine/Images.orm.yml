@@ -17,4 +17,10 @@ FamilyBundle\Entity\Images:
             type: string
             length: 255
             column: Alt
+    oneToOne:
+        User:
+            targetEntity: FamilyBundle\Entity\User
+            joinColumn:
+            name: user_id
+            referencedColumnName: id
     lifecycleCallbacks: {  }

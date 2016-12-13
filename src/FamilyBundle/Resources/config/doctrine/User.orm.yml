@@ -47,4 +47,6 @@ FamilyBundle\Entity\User:
         anniversaire:
             type: date
             column: Anniversaire
+
+
     lifecycleCallbacks: {  }
