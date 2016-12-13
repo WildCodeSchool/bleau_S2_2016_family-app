@@ -21,11 +21,16 @@ class PhoneController extends Controller
      */
     
    public function indexAction(){
-       
+
+       // Appel à la base de donnée
+       //getDoctrine appel la methode Doctrine
+       //getManager appel des ORM
        $em = $this->getDoctrine()->getManager();
-       
+
+       // Appel à l'entity
        $phone = $em->getRepository('FamilyBundle:User')->findAll();
-       
+
+       // Retour à la page concernée avec une valeur appelée
        return $this->render('@Family/Default/phone.html.twig', array(
            'phones'=>$phone,
        ));

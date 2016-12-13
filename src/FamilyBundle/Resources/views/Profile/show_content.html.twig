@@ -1,6 +1,8 @@
 
 {% trans_default_domain 'FOSUserBundle' %}
-
+<div class="row center-align "><br>
+    <img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo">
+</div>
 <div class="container">
 
 <br>
@@ -22,7 +24,7 @@
     <p>{{ 'Anniversaire' }}: {{ user.anniversaire|date("m/d/Y") }}</p>
 
 </div>
-<a href="{{ path('fos_user_profile_edit') }}">Editer votre profile</a>
+<a href="{{ path('fos_user_profile_edit') }}" class="waves-effect waves-light btn">Editer votre profile</a>
 </div>
 
 

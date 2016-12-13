@@ -11,12 +11,12 @@
         <a href="{{ path('fos_user_registration_register') }}"><h5>1- Enregistrez vous en cliquant ici :</h5></a><br><br>
         <h5>2- Connectez vous :</h5> <br><br>
 
-<form class="form " action="{{ path("fos_user_security_check") }}" method="post">
-    {% if csrf_token %}
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-    {% endif %}
+        <form class="form " action="{{ path("fos_user_security_check") }}" method="post">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+            {% endif %}
 
-    <div class="row col S6">
+            <div class="row col S7 m6 l6">
 
                 <div class="input-field">
                     <i class="material-icons prefix">account_circle</i>
@@ -24,24 +24,24 @@
                     <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
                 </div>
 
-    </div>
-    <div class="row col s6">
-
-            <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <label for="password">{{ 'security.login.password'|trans }}</label>
-                <input type="password" id="password" name="_password" required="required" />
             </div>
+            <div class="row col s7 m6 l6">
 
-    </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <label for="password">{{ 'security.login.password'|trans }}</label>
+                    <input type="password" id="password" name="_password" required="required" />
+                </div>
 
-    <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"  />
-    <label for="filled-in-box">{{ 'security.login.remember_me'|trans }}</label>
-
-
-    <input class="waves-effect waves-light btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-
-</form>
+            </div>
+            <div class="row col s7 m6 l6">
+            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"  />
+            <label for="filled-in-box">{{ 'security.login.remember_me'|trans }}</label>
+            </div>
+            <div class="row col s7 m6 l6">
+            <input class="waves-effect waves-light btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+            </div>
+        </form>
 
     </div>
 </div>

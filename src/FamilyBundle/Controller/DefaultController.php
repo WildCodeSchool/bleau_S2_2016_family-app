@@ -18,7 +18,7 @@ class DefaultController extends Controller
 
     public function calendarAction()
     {
-        return $this->render('@Family/Default/calendar.html.twig');
+        return $this->render('@Family/Calendar/agenda-views.html.twig');
     }
 
     public function timeAction()
@@ -35,5 +35,6 @@ class DefaultController extends Controller
     {
         return $this->render('@Family/Default/mention.html.twig');
     }
+
 
 }

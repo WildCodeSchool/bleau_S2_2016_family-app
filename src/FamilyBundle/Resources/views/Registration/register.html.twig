@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 {% block body %}
-
+<div class="container">
 {% block fos_user_content %}
 {% include "FOSUserBundle:Registration:register_content.html.twig" %}
 {% endblock fos_user_content %}
@@ -9,10 +9,7 @@
 
 {% block stylesheet %}
 {{ parent() }}
-<link rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 
-    <script>$('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15 // Creates a dropdown of 15 years to control year
-        });</script>
+</div>
 {% endblock %}

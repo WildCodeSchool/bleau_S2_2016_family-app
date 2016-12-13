@@ -1,0 +1,25 @@
+{% extends 'base.html.twig'%}
+
+{% block stylesheet %}
+{{ parent() }}
+
+
+<link rel="stylesheet" href="{{ asset('bundles/family/css/fullcalendar.print.min.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/family/css/calendar_main.css') }}">
+{% endblock %}
+
+
+
+
+
+{% block body %}
+	<div id='calendar'>test</div>
+{% endblock %}
+
+{% block js %}
+	{{ parent() }}
+	<link type="text/javascript" href="{{ asset('bundles/family/js/moment.min.js') }}">
+	<link type="text/javascript" href="{{ asset('bundles/family/js/fullcalendar.min.js') }}">
+	<link type="text/javascript" href="{{ asset('bundles/family/js/calendar_main.js') }}">
+{% endblock %}
+

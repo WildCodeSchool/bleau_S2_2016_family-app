@@ -3,79 +3,80 @@
     <img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo">
 </div>
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-<div class="row form center">
-    <div class="col s6"><i class="material-icons prefix">verified_user</i>
+<div class="row form ">
+    <div class="col s5 m3 l3"><i class="material-icons prefix">verified_user</i>
         {{ form_label(form.username) }}
         {{ form_errors(form.username) }}
         {{ form_widget(form.username) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">email</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">email</i>
         {{ form_label(form.email) }}
         {{ form_errors(form.email) }}
         {{ form_widget(form.email) }}
     </div>
-    {#<div class="col s6">#}
-        {#{{ form_label(form.plainPassword.first) }}#}
-        {#{{ form_errors(form.plainPassword.first) }}#}
-        {#{{ form_widget(form.plainPassword.first) }}#}
-    {#</div>#}
-    {#<div class="col s6">#}
-        {#{{ form_label(form.plainPassword.second) }}#}
-        {#{{ form_errors(form.plainPassword.second) }}#}
-        {#{{ form_widget(form.plainPassword.second) }}#}
-    {#</div>#}
-    <div class="col s6"><i class="material-icons prefix">account_circle</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">vpn_key</i>
+        {{ form_label(form.plainPassword.first) }}
+        {{ form_errors(form.plainPassword.first) }}
+        {{ form_widget(form.plainPassword.first) }}
+    </div>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">vpn_key</i>
+        {{ form_label(form.plainPassword.second) }}
+        {{ form_errors(form.plainPassword.second) }}
+        {{ form_widget(form.plainPassword.second) }}
+    </div>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">account_circle</i>
         {{ form_label(form.nom) }}
         {{ form_errors(form.nom) }}
         {{ form_widget(form.nom) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">account_circle</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">account_circle</i>
         {{ form_label(form.prenom) }}
         {{ form_errors(form.prenom) }}
         {{ form_widget(form.prenom) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">location_on</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">location_on</i>
         {{ form_label(form.adresse) }}
         {{ form_errors(form.adresse) }}
         {{ form_widget(form.adresse) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">location_on</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">location_on</i>
         {{ form_label(form.code_postal) }}
         {{ form_errors(form.code_postal) }}
         {{ form_widget(form.code_postal) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">location_on</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">location_on</i>
         {{ form_label(form.ville) }}
         {{ form_errors(form.ville) }}
         {{ form_widget(form.ville) }}
     </div>
-    <div class="col s6">
-        {{ form_label(form.anniversaire) }}
-        {{ form_errors(form.anniversaire) }}
-        {{ form_widget(form.anniversaire) }}
-    </div>
-    <div class="col s6"><i class="material-icons prefix">phone</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
         {{ form_label(form.tel_03) }}
         {{ form_errors(form.tel_03) }}
         {{ form_widget(form.tel_03) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">phone</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
         {{ form_label(form.tel_06) }}
         {{ form_errors(form.tel_06) }}
         {{ form_widget(form.tel_06) }}
     </div>
-    <div class="col s6"><i class="material-icons prefix">phone</i>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
         {{ form_label(form.tel_09) }}
         {{ form_errors(form.tel_09) }}
         {{ form_widget(form.tel_09) }}
     </div>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">today</i>
+        {{ form_label(form.anniversaire) }}
+        {{ form_errors(form.anniversaire) }}
+        {{ form_widget(form.anniversaire) }}
+    </div>
 
 </div>
     {#{{ form_widget(edit_form) }}#}
-<div class="col s6">
+<div class="col s5 m3 l3 center">
     <input class="waves-effect waves-light btn" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+</div><br>
+{#{{ form_end(form) }}#}
+<div class="col s5 m3 l3 center">
+    <a href="{{ path('fos_user_profile_show') }}" class="waves-effect waves-light btn">Retour au profile</a>
 </div>
-<div class="col s6">
-    <a href="{{ path('fos_user_profile_show') }}">Retour au profile</a>
-</div>
-    {#{{ form_end(form) }}#}
+

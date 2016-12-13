@@ -14,6 +14,7 @@ namespace FamilyBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -28,7 +29,7 @@ class RegistrationFormType extends AbstractType
             ->add('tel_09', null, array('label' => 'Tel_09'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
-            ->add('anniversaire', null, array('label' => 'Anniversaire'));
+            ->add('anniversaire');
     }
 
     public function getParent()

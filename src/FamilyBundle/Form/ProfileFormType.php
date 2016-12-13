@@ -12,6 +12,7 @@
 namespace FamilyBundle\Form;
 
 
+use FOS\UserBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormBuilder;
@@ -30,7 +31,14 @@ class ProfileFormType extends BaseType
             ->add('tel_09', null, array('label' => 'Tel_09'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
-            ->add('anniversaire', null, array('label' => 'Anniversaire'));
+            ->add('anniversaire', null, array('label' => 'Anniversaire'))
+            ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
+                        'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
+                        'options' => array('translation_domain' => 'FOSUserBundle'),
+                        'first_options' => array('label' => 'form.new_password'),
+                        'second_options' => array('label' => 'form.new_password_confirmation'),
+                        'invalid_message' => 'fos_user.password.mismatch',
+                    ));
     }
 
     public function getParent()

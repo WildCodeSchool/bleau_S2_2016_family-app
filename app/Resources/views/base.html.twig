@@ -12,10 +12,12 @@
         <!--Import materialize.css-->
         {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/fingerpaint.min.css') }}">#}
         <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/fullcalendar.min.css') }}">
+
+         {% endblock %}
 
 
 
-        {% endblock %}
 
     </head>
     <body>
@@ -28,9 +30,14 @@
         <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
         <!-- Compiled and minified JavaScript offline Materialize -->
-        <script src="{{ asset('bundles/family/js/materialize.min.js') }}"></script>
-        {#<script src="{{ asset('bundles/family/js/main.js') }}"></script>#}
-        <script> $(".button-collapse").sideNav();</script>
+        <script type="text/javascript" src="{{ asset('bundles/family/js/materialize.min.js') }}"></script>
+    {% block js %}
+
+        <script type="text/javascript" src="{{ asset('bundles/family/js/main.js') }}"></script>
+
+    {% endblock %}
+
+
 
 
     </body>
