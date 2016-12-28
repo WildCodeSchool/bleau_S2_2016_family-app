@@ -1,5 +1,5 @@
 {% extends "base.html.twig" %}
-
+{% block title %}Register{% endblock %}
 {% block body %}
 <div class="container">
 
@@ -14,4 +14,9 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 
 </div>
+
+{% endblock %}
+{% block footer %}
+    <!--Ajout du lien interne vers le Footer-->
+    {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}

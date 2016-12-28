@@ -1,5 +1,5 @@
 {% extends "base.html.twig" %}
-
+{% block title %}LogIn{% endblock %}
 {% block body %}
     <div class="container">
 
@@ -13,4 +13,6 @@
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
     </div>
+<!--Ajout du lien interne vers le Footer-->
+{% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}

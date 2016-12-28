@@ -1,25 +1,31 @@
 {% extends 'base.html.twig'%}
 
+{% block title %}Calendar{% endblock %}
 {% block stylesheet %}
 {{ parent() }}
 
 
-<link rel="stylesheet" href="{{ asset('bundles/family/css/fullcalendar.print.min.css') }}">
+<link rel="stylesheet" href="{{ asset('bundles/family/css/fullcalendar.min.css') }}">
 <link rel="stylesheet" href="{{ asset('bundles/family/css/calendar_main.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 {% endblock %}
-
-
 
 
 
 {% block body %}
-	<div id='calendar'>test</div>
-{% endblock %}
+
+
+	{% include "@Family/Default/nav.html.twig"  %}
+	<div id='calendar'></div>
+	{% include "@Family/Default/footer.html.twig"  %}
+
 
 {% block js %}
 	{{ parent() }}
 	<link type="text/javascript" href="{{ asset('bundles/family/js/moment.min.js') }}">
 	<link type="text/javascript" href="{{ asset('bundles/family/js/fullcalendar.min.js') }}">
-	<link type="text/javascript" href="{{ asset('bundles/family/js/calendar_main.js') }}">
+	{#<link type="text/javascript" href="{{ asset('bundles/family/js/calendar_main.js') }}">#}
+
+{% endblock %}
 {% endblock %}
 
