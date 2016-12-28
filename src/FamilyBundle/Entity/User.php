@@ -58,8 +58,43 @@ class User extends BaseUser
     /**
      * @var \DateTime
      */
-    private $anniversaire;
+    public $anniversaire;
+    
+    public $anniversaire_string;
+    
+    public $countdown;
 
+    /**
+     * @return mixed
+     */
+    public function getCountdown()
+    {
+        return $this->countdown;
+    }
+
+    /**
+     * @param mixed $countdown
+     */
+    public function setCountdown($countdown)
+    {
+        $this->countdown = $countdown;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAnniversaireString()
+    {
+        return $this->anniversaire_string;
+    }
+
+    /**
+     * @param mixed $anniversaire_string
+     */
+    public function setAnniversaireString($anniversaire_string)
+    {
+        $this->anniversaire_string = $anniversaire_string;
+    }
 
     /**
      * Get id

@@ -9,11 +9,11 @@ family_phone:
 
 family_calendar:
     path:     /calendar
-    defaults: { _controller: FamilyBundle:Default:calendar}
+    defaults: { _controller: FamilyBundle:Calendar:agenda-views}
 
 family_time:
     path:     /time
-    defaults: { _controller: FamilyBundle:Default:time}
+    defaults: { _controller: FamilyBundle:Time:index}
 
 family_map:
     path:     /map

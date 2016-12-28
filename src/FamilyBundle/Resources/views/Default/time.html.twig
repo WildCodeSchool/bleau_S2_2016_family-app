@@ -11,7 +11,31 @@
 {% block body %}
     {% include "@Family/Default/nav.html.twig"  %}
 
-    test 3
+    <h1>Countdown Listings :</h1>
+
+    <table class="bordered highlight responsive-table centered">
+        <thead>
+        <tr>
+            <th data-field="id">Nom</th>
+            <th data-field="name">Prenon</th>
+            <th data-field="price">Anniversaire</th>
+            <th data-field="price">Reste</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for user in times %}
+            <tr>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.anniversaire_string }}</td>
+                <td>{{ user.countdown }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
     {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}
 
