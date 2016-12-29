@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FamilyBundle\Entity\User;
 
-//use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+//Datetime de php
 use \DateTime;
 
 class TimeController extends Controller
@@ -44,10 +44,9 @@ class TimeController extends Controller
 
 
         foreach ($time as $cle => $object_user) {
-           // echo $cle.' - '.$object_user.'<br />'."\n";
-           // var_dump($object_user);
+
             foreach ($object_user as $champ => $value) {
-               // echo $champ . ' - ' . $value . '<br />' . "\n";
+
                 if($champ == 'anniversaire'){
                     $object_user->setAnniversaireString($value->format('Y-m-d'));
                     //Récupère le mois et jour de l'anniversaire pour tester l'année à utiliser
@@ -66,12 +65,13 @@ class TimeController extends Controller
                     }
                     //Différence entre les 2 dates, prochaine anniversaire et maintenant
                     $diff = $dateNextAnniv->diff($dateNow)->format("%a");
-                    //echo $diff. '<br />';
+                    //bug +1 pour calcul exact j rstant
+                    $diff = $diff+1;
                     $object_user->setCountdown($diff);
                 }
             }
         }
-        //var_dump($time);
+
         // Retour à la page concernée avec une valeur appelée
         return $this->render('@Family/Default/time.html.twig', array(
             'times'=>$time,

@@ -58,43 +58,14 @@ class User extends BaseUser
     /**
      * @var \DateTime
      */
+    //public pour acceder aux champ ds l'obj
     public $anniversaire;
-    
+    //variable le timecontroller
     public $anniversaire_string;
-    
+    //variable pour le countdown
     public $countdown;
 
-    /**
-     * @return mixed
-     */
-    public function getCountdown()
-    {
-        return $this->countdown;
-    }
-
-    /**
-     * @param mixed $countdown
-     */
-    public function setCountdown($countdown)
-    {
-        $this->countdown = $countdown;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAnniversaireString()
-    {
-        return $this->anniversaire_string;
-    }
-
-    /**
-     * @param mixed $anniversaire_string
-     */
-    public function setAnniversaireString($anniversaire_string)
-    {
-        $this->anniversaire_string = $anniversaire_string;
-    }
+ 
 
     /**
      * Get id
@@ -352,4 +323,38 @@ class User extends BaseUser
     {
         return $this->images;
     }
+
+
+    /**
+     * @return mixed
+     */
+    public function getCountdown()
+    {
+        return $this->countdown;
+    }
+
+    /**
+     * @param mixed $countdown
+     */
+    public function setCountdown($countdown)
+    {
+        $this->countdown = $countdown;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAnniversaireString()
+    {
+        return $this->anniversaire_string;
+    }
+
+    /**
+     * @param mixed $anniversaire_string
+     */
+    public function setAnniversaireString($anniversaire_string)
+    {
+        $this->anniversaire_string = $anniversaire_string;
+    }
+    
 }

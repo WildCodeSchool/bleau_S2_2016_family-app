@@ -11,6 +11,25 @@
 {% block body %}
     {% include "@Family/Default/nav.html.twig"  %}
 
-    test 4
+    <h1>Maps Events :</h1>
+
+    <div id="map"></div>
+
     {% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7hklkFjuJH0suuR_ni4Jl7_sPnjHEfPk&callback=initMap">
+    </script>
 {% endblock %}
