@@ -2,11 +2,15 @@
 
 namespace FamilyBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Images
  */
 class Images
 {
+    
+    //CODE Gene
     /**
      * @var int
      */
@@ -79,5 +83,34 @@ class Images
     public function getAlt()
     {
         return $this->alt;
+    }
+    /**
+     * @var \FamilyBundle\Entity\User
+     */
+    private $User;
+
+
+    /**
+     * Set user
+     *
+     * @param \FamilyBundle\Entity\User $user
+     *
+     * @return Images
+     */
+    public function setUser(\FamilyBundle\Entity\User $user = null)
+    {
+        $this->User = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \FamilyBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->User;
     }
 }

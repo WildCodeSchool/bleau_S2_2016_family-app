@@ -14,16 +14,6 @@
         {{ form_errors(form.email) }}
         {{ form_widget(form.email) }}
     </div>
-    <div class="col s5 m3 l3"><i class="material-icons prefix">vpn_key</i>
-        {{ form_label(form.plainPassword.first) }}
-        {{ form_errors(form.plainPassword.first) }}
-        {{ form_widget(form.plainPassword.first) }}
-    </div>
-    <div class="col s5 m3 l3"><i class="material-icons prefix">vpn_key</i>
-        {{ form_label(form.plainPassword.second) }}
-        {{ form_errors(form.plainPassword.second) }}
-        {{ form_widget(form.plainPassword.second) }}
-    </div>
     <div class="col s5 m3 l3"><i class="material-icons prefix">account_circle</i>
         {{ form_label(form.nom) }}
         {{ form_errors(form.nom) }}
@@ -50,24 +40,29 @@
         {{ form_widget(form.ville) }}
     </div>
     <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
-        {{ form_label(form.tel_03) }}
-        {{ form_errors(form.tel_03) }}
-        {{ form_widget(form.tel_03) }}
+        {{ form_label(form.domicile) }}
+        {{ form_errors(form.domicile) }}
+        {{ form_widget(form.domicile) }}
     </div>
     <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
-        {{ form_label(form.tel_06) }}
-        {{ form_errors(form.tel_06) }}
-        {{ form_widget(form.tel_06) }}
+        {{ form_label(form.portable) }}
+        {{ form_errors(form.portable) }}
+        {{ form_widget(form.portable) }}
     </div>
     <div class="col s5 m3 l3"><i class="material-icons prefix">phone</i>
-        {{ form_label(form.tel_09) }}
-        {{ form_errors(form.tel_09) }}
-        {{ form_widget(form.tel_09) }}
+        {{ form_label(form.box) }}
+        {{ form_errors(form.box) }}
+        {{ form_widget(form.box) }}
     </div>
     <div class="col s5 m3 l3"><i class="material-icons prefix">today</i>
         {{ form_label(form.anniversaire) }}
         {{ form_errors(form.anniversaire) }}
         {{ form_widget(form.anniversaire) }}
+    </div>
+    <div class="col s5 m3 l3"><i class="material-icons prefix">vpn_key</i>
+        {{ form_label(form.current_password) }}
+        {{ form_errors(form.current_password) }}
+        {{ form_widget(form.current_password) }}
     </div>
 
 </div>
@@ -75,7 +70,7 @@
 <div class="col s5 m3 l3 center">
     <input class="waves-effect waves-light btn" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
 {#</div><br>#}
-{#{{ form_end(form) }}#}
+{{ form_end(form) }}
 {#<div class="col s5 m3 l3 center">#}
     <a href="{{ path('fos_user_profile_show') }}" class="waves-effect waves-light btn">Retour au profile</a>
 {#</div><br>#}

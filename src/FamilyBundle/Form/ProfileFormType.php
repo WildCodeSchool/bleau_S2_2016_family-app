@@ -11,35 +11,26 @@
 
 namespace FamilyBundle\Form;
 
-
-use FOS\UserBundle\Util\LegacyFormHelper;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormBuilder;
-use FOS\UserBundle\Form\Type\ProfileFormType as BaseType;
 
-class ProfileFormType extends BaseType
+class ProfileFormType extends AbstractType
 {
-    public function buildUserForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('nom', null, array('label' => 'Nom'))
             ->add('prenom', null, array('label' => 'Prenom'))
             ->add('adresse', null, array('label' => 'Adresse'))
-            ->add('tel_03', null, array('label' => 'Tel Domicile'))
-            ->add('tel_06', null, array('label' => 'Tel Portable'))
-            ->add('tel_09', null, array('label' => 'Tel Internet'))
+            ->add('domicile', null, array('label' => 'Tel Domicile'))
+            ->add('portable', null, array('label' => 'Tel Portable'))
+            ->add('box', null, array('label' => 'Tel Internet'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
             ->add('anniversaire', null, array('label' => 'Anniversaire'))
-            
-            ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
-                        'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
-                        'options' => array('translation_domain' => 'FOSUserBundle'),
-                        'first_options' => array('label' => 'form.new_password'),
-                        'second_options' => array('label' => 'form.new_password_confirmation'),
-                        'invalid_message' => 'fos_user.password.mismatch',
-                    ));
+            ->add('current_password', 'password', array(
+                'mapped' => false
+            ));
     }
 
     public function getParent()

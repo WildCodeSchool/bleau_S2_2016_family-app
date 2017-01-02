@@ -24,9 +24,9 @@ class RegistrationFormType extends AbstractType
             ->add('nom', null, array('label' => 'Nom'))
             ->add('prenom', null, array('label' => 'Prenom'))
             ->add('adresse', null, array('label' => 'Adresse'))
-            ->add('tel_03', null, array('label' => 'Tel Domicile'))
-            ->add('tel_06', null, array('label' => 'Tel Portable'))
-            ->add('tel_09', null, array('label' => 'Tel Internet'))
+            ->add('domicile', null, array('label' => 'Tel Domicile'))
+            ->add('portable', null, array('label' => 'Tel Portable'))
+            ->add('box', null, array('label' => 'Tel Internet'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
             ->add('anniversaire',null, array('label' => 'Anniversaire'));

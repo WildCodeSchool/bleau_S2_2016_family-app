@@ -6,6 +6,5 @@ parameters:
 services:
     app.form.profile:
         class: FamilyBundle\Form\ProfileFormType
-        arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: app_user_profile }

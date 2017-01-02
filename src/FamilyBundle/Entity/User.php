@@ -11,10 +11,47 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User extends BaseUser
 {
-   
+    //public pour acceder aux champ ds l'obj
+    public $anniversaire;
+    //variable le timecontroller
+    public $anniversaire_string;
+    //variable pour le countdown
+    public $countdown;
+
+    /**
+     * @return mixed
+     */
+    public function getAnniversaireString()
+    {
+        return $this->anniversaire_string;
+    }
+
+    /**
+     * @param mixed $anniversaire_string
+     */
+    public function setAnniversaireString($anniversaire_string)
+    {
+        $this->anniversaire_string = $anniversaire_string;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCountdown()
+    {
+        return $this->countdown;
+    }
+
+    /**
+     * @param mixed $countdown
+     */
+    public function setCountdown($countdown)
+    {
+        $this->countdown = $countdown;
+    }
 
 // Code genere
-    
+
     /**
      * @var string
      */
@@ -28,17 +65,17 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $tel03;
+    private $domicile;
 
     /**
      * @var string
      */
-    private $tel06;
+    private $portable;
 
     /**
      * @var string
      */
-    private $tel09;
+    private $box;
 
     /**
      * @var string
@@ -55,27 +92,6 @@ class User extends BaseUser
      */
     private $ville;
 
-    /**
-     * @var \DateTime
-     */
-    //public pour acceder aux champ ds l'obj
-    public $anniversaire;
-    //variable le timecontroller
-    public $anniversaire_string;
-    //variable pour le countdown
-    public $countdown;
-
- 
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set nom
@@ -126,75 +142,75 @@ class User extends BaseUser
     }
 
     /**
-     * Set tel03
+     * Set domicile
      *
-     * @param string $tel03
+     * @param string $domicile
      *
      * @return User
      */
-    public function setTel03($tel03)
+    public function setDomicile($domicile)
     {
-        $this->tel03 = $tel03;
+        $this->domicile = $domicile;
 
         return $this;
     }
 
     /**
-     * Get tel03
+     * Get domicile
      *
      * @return string
      */
-    public function getTel03()
+    public function getDomicile()
     {
-        return $this->tel03;
+        return $this->domicile;
     }
 
     /**
-     * Set tel06
+     * Set portable
      *
-     * @param string $tel06
+     * @param string $portable
      *
      * @return User
      */
-    public function setTel06($tel06)
+    public function setPortable($portable)
     {
-        $this->tel06 = $tel06;
+        $this->portable = $portable;
 
         return $this;
     }
 
     /**
-     * Get tel06
+     * Get portable
      *
      * @return string
      */
-    public function getTel06()
+    public function getPortable()
     {
-        return $this->tel06;
+        return $this->portable;
     }
 
     /**
-     * Set tel09
+     * Set box
      *
-     * @param string $tel09
+     * @param string $box
      *
      * @return User
      */
-    public function setTel09($tel09)
+    public function setBox($box)
     {
-        $this->tel09 = $tel09;
+        $this->box = $box;
 
         return $this;
     }
 
     /**
-     * Get tel09
+     * Get box
      *
      * @return string
      */
-    public function getTel09()
+    public function getBox()
     {
-        return $this->tel09;
+        return $this->box;
     }
 
     /**
@@ -292,69 +308,4 @@ class User extends BaseUser
     {
         return $this->anniversaire;
     }
-    
- 
-    /**
-     * @var \FamilyBundle\Entity\Images
-     */
-    private $images;
-
-
-    /**
-     * Set images
-     *
-     * @param \FamilyBundle\Entity\Images $images
-     *
-     * @return User
-     */
-    public function setImages(\FamilyBundle\Entity\Images $images = null)
-    {
-        $this->images = $images;
-
-        return $this;
-    }
-
-    /**
-     * Get images
-     *
-     * @return \FamilyBundle\Entity\Images
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
-
-
-    /**
-     * @return mixed
-     */
-    public function getCountdown()
-    {
-        return $this->countdown;
-    }
-
-    /**
-     * @param mixed $countdown
-     */
-    public function setCountdown($countdown)
-    {
-        $this->countdown = $countdown;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAnniversaireString()
-    {
-        return $this->anniversaire_string;
-    }
-
-    /**
-     * @param mixed $anniversaire_string
-     */
-    public function setAnniversaireString($anniversaire_string)
-    {
-        $this->anniversaire_string = $anniversaire_string;
-    }
-    
 }

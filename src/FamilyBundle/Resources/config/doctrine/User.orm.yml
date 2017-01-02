@@ -17,21 +17,21 @@ FamilyBundle\Entity\User:
             type: string
             length: 255
             column: Prenom
-        tel03:
+        domicile:
             type: string
             length: 255
             nullable: true
-            column: Tel_03
-        tel06:
+
+        portable:
             type: string
             length: 255
             nullable: true
-            column: Tel_06
-        tel09:
+
+        box:
             type: string
             length: 255
             nullable: true
-            column: Tel_09
+
         adresse:
             type: string
             length: 255
