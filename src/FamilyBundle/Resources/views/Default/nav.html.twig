@@ -9,21 +9,25 @@
                 <ul class="hide-on-med-and-down">
                     <div class="center-align row">
                         <li class="col s2">
-                            <a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a>
+                            <a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo" title="Homepage"></a>
                             </li>
                          <li class="col s2">
-                            <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="brand-logo nav_bar_logo" alt="phone"></a>
+                            <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="brand-logo nav_bar_logo" alt="phone" title="Phone"></a>
                          </li>
                         <li class="col s2">
-                            <a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="brand-logo nav_bar_logo" alt="calendar"></a>
+                            <a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="brand-logo nav_bar_logo" alt="calendar" title="Calendar"></a>
                         </li>
 
                         <li class="col s2">
-                            <a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="brand-logo nav_bar_logo" alt="time"></a>
+                            <a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="brand-logo nav_bar_logo" alt="time" title="Time"></a>
                         </li>
                         <li class="col s2">
-                            <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="brand-logo nav_bar_logo" alt="map"></a>
+                            <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="brand-logo nav_bar_logo" alt="map" title="Map"></a>
                         </li>
+                        <li class="col s2">
+                            <a href="{{ path('fos_user_profile_show') }}"><img src="{{ asset('bundles/family/images/profile.png') }}" class="brand-logo nav_bar_logo" alt="Profile" title="profile"></a>
+                        </li>
+
                     </div>
                 </ul>
 
@@ -43,8 +47,7 @@
                     <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li><br>
 
                 </ul>
-                <i class="material-icons">menu</i>
+
             </div>
         </nav>
-
     </header>

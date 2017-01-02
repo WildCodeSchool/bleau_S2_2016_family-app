@@ -12,8 +12,10 @@
     {% include "@Family/Default/nav.html.twig"  %}
 
     <h1>Maps Events :</h1>
-
+    <div>Reel event</div>
     <div id="map"></div>
+
+
 
     {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}
@@ -24,7 +26,7 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+                zoom: 12
             });
         }
 
