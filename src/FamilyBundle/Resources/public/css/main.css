@@ -17,8 +17,16 @@ html, body { height: 100%; margin: 0; padding: 0; }
     margin: 15px;
 }
 
+/*body {*/
+    /*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/72900/blueleaf.jpg')!important;*/
+    /*background-attachment: fixed!important;*/
+    /*background-size: cover!important;*/
+/*}*/
 
-
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
 footer{
     font-size: 18px !important;

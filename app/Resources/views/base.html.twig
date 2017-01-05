@@ -14,9 +14,7 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
 
 
-        <link type="text/javascript" href="{{ asset('bundles/family/js/moment.min.js') }}">
-        <link type="text/javascript" href="{{ asset('bundles/family/js/fullcalendar.min.js') }}">
-	    <link type="text/javascript" href="{{ asset('bundles/family/js/calendar_main.js') }} ">
+
 	    {% endblock %}
     </head>
     <body>
@@ -24,17 +22,20 @@
     {% block header %}{% endblock %}
     {% block body %}{% endblock %}
     {% block footer %}{% endblock %}
+    <script type="text/javascript" src="{{ asset('bundles/family/js/moment.min.js') }}"></script>
+
 
     <!-- jQuery is required by Materialize to function -->
-
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript offline Materialize -->
 
     <script type="text/javascript" src="{{ asset('bundles/family/js/materialize.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/family/js/fullcalendar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/family/js/calendar_main.js') }}"></script>
 
-    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    {#<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>#}
+    {#<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>#}
 
     {% block js %}
     <script type="text/javascript" src="{{ asset('bundles/family/js/main.js') }}"></script>

@@ -9,7 +9,7 @@ family_phone:
 
 family_calendar:
     path:     /calendar
-    defaults: { _controller: FamilyBundle:Calendar:agenda-views}
+    defaults: { _controller: FamilyBundle:Default:calendar}
 
 family_time:
     path:     /time

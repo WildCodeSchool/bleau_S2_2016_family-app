@@ -12,8 +12,11 @@
     {% include "@Family/Default/nav.html.twig"  %}
 
     <h1>Maps Events :</h1>
+
     <div>Reel event</div>
+     <hr />
     <div id="map"></div>
+     <hr />
     <div id="save-widget">
         <strong>Google Sydney</strong>
         <p>We’re located on the water in Pyrmont, with views of the Sydney Harbour Bridge, The
@@ -43,7 +46,9 @@ function initMap() {
       ],
       position: google.maps.ControlPosition.BOTTOM_LEFT
     }
+
   });
+
 
   var widgetDiv = document.getElementById('save-widget');
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
@@ -64,7 +69,10 @@ function initMap() {
   var marker = new google.maps.Marker({
     map: map,
     position: saveWidget.getPlace().location
+
   });
+
+
 }
 
     </script>
