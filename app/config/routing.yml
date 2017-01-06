@@ -1,0 +1,5 @@
+family:
+    resource: "@FamilyBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

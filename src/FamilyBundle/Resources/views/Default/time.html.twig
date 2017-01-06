@@ -1,0 +1,41 @@
+{%extends 'base.html.twig'%}
+{% block title %}Countdown Listings{% endblock %}
+{% block stylesheet%}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    {% include "@Family/Default/nav.html.twig"  %}
+
+    <h1>Countdown Listings :</h1>
+
+    <table class="bordered highlight responsive-table centered">
+        <thead>
+        <tr>
+            <th data-field="id">Nom</th>
+            <th data-field="name">Prenom</th>
+            <th data-field="price">Anniversaire</th>
+            <th data-field="price">Reste nb de jrs</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for user in times %}
+            <tr>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.anniversaire_string }}</td>
+                <td>{{ user.countdown }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}
+

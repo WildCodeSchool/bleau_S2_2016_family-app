@@ -1,4 +1,4 @@
-FAMILY APP :
+FAMILYAppBundle :
 
 App pour la famille pour gerer :
 

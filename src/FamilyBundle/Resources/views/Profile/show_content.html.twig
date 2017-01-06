@@ -1,0 +1,32 @@
+
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="row center-align "><br>
+    <img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo">
+</div>
+<div class="container">
+
+<br>
+<h4>Votre Profile est :</h4>
+<br>
+
+<div class="family user_show">
+    <p>{{ 'Username' }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+
+    <p>{{ 'Nom' }}: {{ user.nom }}</p>
+    <p>{{ 'Prenom' }}: {{ user.prenom }}</p>
+    <p>{{ 'Tel Domicile' }}: {{ user.domicile }}</p>
+    <p>{{ 'Tel Portable' }}: {{ user.portable }}</p>
+    <p>{{ 'Tel Internet' }}: {{ user.box }}</p>
+    <p>{{ 'Adresse' }}: {{ user.adresse }}</p>
+    <p>{{ 'Code Postal' }}: {{ user.codepostal }}</p>
+    <p>{{ 'Ville' }}: {{ user.ville }}</p>
+    <p>{{ 'Anniversaire' }}: {{ user.anniversaire|date("d/m/Y") }}</p>
+
+
+</div>
+<a href="{{ path('fos_user_profile_edit') }}" class="waves-effect waves-light btn">Editer votre profile</a><br><br>
+<a href="{{ path('family_homepage') }}" class="waves-effect waves-light btn">Retour homepage</a><br>
+</div>
+
+

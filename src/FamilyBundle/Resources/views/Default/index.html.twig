@@ -1,0 +1,123 @@
+{%extends 'base.html.twig'%}
+{% block title %}Homepage{% endblock %}
+{% block stylesheet%}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+<!--Ajout du lien interne vers la NavBar-->
+{% include "@Family/Default/nav.html.twig"  %}
+
+{#<div class="join_view ng-scope"><br>#}
+    <h3 class="center-align">Family App :</h3><br><h3 class="center-align">4 Fonctions pour organiser sa famille.</h3><br>
+
+        {#<div class="container center-align"><br><br>#}
+            {#<div class="row">#}
+                {#<div class="col s6">#}
+                    {#<a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"><br>Phone :</a>#}
+                {#</div>#}
+                {#<div class="col s6">#}
+                    {#<a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar"><br>Calendar :</a>#}
+                {#</div>#}
+            {#</div><br>#}
+            {#<div class="row">#}
+                {#<div class="col s6">#}
+                    {#<a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time"><br>Timer :</a>#}
+                {#</div>#}
+                {#<div class="col s6">#}
+                    {#<a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map"><br>Map :</a>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    <div class="container center-align col s12 m12 l12">
+
+            <div class="card-panel ">
+
+                <img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone">
+                <span class="card-title">Phone listings :</span>
+
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+
+
+
+        <div class="card-panel ">
+
+            <img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar">
+            <span class="card-title">Calendar Events :</span>
+
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+
+
+
+        <div class="card-panel ">
+
+            <img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time">
+            <span class="card-title">CountDown Listings :</span>
+
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+
+
+
+        <div class="card-panel ">
+
+            <img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map">
+            <span class="card-title">Maps Events :</span>
+
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+        {#<div id="f1_container">#}
+            {#<div id="f1_card" class="shadow">#}
+                {#<div class="front face">#}
+                    {#<a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"></a>#}
+                {#</div>#}
+                {#<div class="back face center">#}
+                    {#<p>This is nice for exposing more information about an image.</p>#}
+                    {#<p>Any content can go here.</p>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+
+
+{% endblock %}
+{% block footer %}
+<!--Ajout du lien interne vers le Footer-->
+{% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}

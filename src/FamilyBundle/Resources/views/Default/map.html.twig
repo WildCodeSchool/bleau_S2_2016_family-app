@@ -1,0 +1,93 @@
+{%extends 'base.html.twig'%}
+{% block title %}Maps Events{% endblock %}
+{% block stylesheet%}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    {% include "@Family/Default/nav.html.twig"  %}
+
+    <h1>Maps Events :</h1>
+
+    <div>Reel event</div>
+     <hr />
+    <div id="map"></div>
+     <hr />
+    <div id="save-widget">
+        <strong>Google Sydney</strong>
+        <p>We’re located on the water in Pyrmont, with views of the Sydney Harbour Bridge, The
+            Rocks and Darling Harbour. Our building is the greenest in Sydney. Inside, we have a
+            "living wall" made of plants, a tire swing, a library with a nap pod and some amazing
+            baristas.</p>
+    </div>
+ <script>
+/*
+ * This sample uses a custom control to display the SaveWidget. Custom
+ * controls can be used in place of the default Info Window to create a
+ * custom UI.
+ * This sample uses a Place ID to reference Google Sydney. Place IDs are
+ * stable values that uniquely reference a place on a Google Map and are
+ * documented in detail at:
+ * https://developers.google.com/maps/documentation/javascript/places#placeid
+ */
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: {lat: -33.8666, lng: 151.1958},
+    mapTypeControlOptions: {
+      mapTypeIds: [
+        google.maps.MapTypeId.ROADMAP,
+        google.maps.MapTypeId.SATELLITE
+      ],
+      position: google.maps.ControlPosition.BOTTOM_LEFT
+    }
+
+  });
+
+
+  var widgetDiv = document.getElementById('save-widget');
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+
+  // Append a Save Control to the existing save-widget div.
+  var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+    place: {
+      // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
+      placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+      location: {lat: -33.866647, lng: 151.195886}
+    },
+    attribution: {
+      source: 'Google Maps JavaScript API',
+      webUrl: 'https://developers.google.com/maps/'
+    }
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    position: saveWidget.getPlace().location
+
+  });
+
+
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<var class="apiparam replaceable-credential">AIzaSyC7hklkFjuJH0suuR_ni4Jl7_sPnjHEfPk</var>&callback=initMap&signed_in=true" async defer>
+    </script>
+
+
+
+    {% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7hklkFjuJH0suuR_ni4Jl7_sPnjHEfPk&callback=initMap">
+    </script>
+{% endblock %}

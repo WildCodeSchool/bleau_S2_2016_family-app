@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+<div class="container">
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock fos_user_content %}
+
+{% endblock %}
+
+{% block stylesheet %}
+{{ parent() }}
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+
+</div>
+
+{% endblock %}
+{% block footer %}
+    <!--Ajout du lien interne vers le Footer-->
+    {% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}

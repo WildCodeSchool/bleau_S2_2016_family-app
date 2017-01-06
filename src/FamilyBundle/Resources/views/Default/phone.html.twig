@@ -1,0 +1,55 @@
+{%extends 'base.html.twig'%}
+{% block title %}Phone Listings{% endblock %}
+{% block stylesheet%}
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+    {% include "@Family/Default/nav.html.twig"  %}
+    <h1>Phone Listings :</h1>
+
+    <table class="bordered highlight responsive-table centered">
+        <thead>
+        <tr>
+            <th data-field="id">Nom</th>
+            <th data-field="name">Prenon</th>
+            <th data-field="price">Tel Domicile</th>
+            <th data-field="price">Tel Portable</th>
+            <th data-field="price">Tel Internet</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for user in phones %}
+            <tr>
+                <td>{{ user.nom }}</td>
+                <td>{{ user.prenom }}</td>
+                <td>{{ user.domicile }}</td>
+                <td>{{ user.portable }}</td>
+                <td>{{ user.box }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{#{% block css2 %}#}
+    {#<footer class="footer-body" id="mobbern-footer-2">#}
+    {#<div class="page-width container">#}
+
+    {#<div id="scroll-top">#}
+        {#<a id="scroll-top-button" class="scroll-link anim-250" href="" title="" data-original-title="Haut">#}
+            {#<img src="{{ asset('bundles/family/images/haut.png') }}">#}
+        {#</a>#}
+    {#</div>#}
+    {#</div></footer>#}
+
+    {#<link rel="stylesheet" href="{{ asset('bundles/family/css/mobbern.css') }}">#}
+{#{% endblock %}#}
+
+    {% include "@Family/Default/footer.html.twig"  %}
+
+{% endblock %}
