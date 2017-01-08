@@ -14,7 +14,8 @@
 {% include "@Family/Default/nav.html.twig"  %}
 
 {#<div class="join_view ng-scope"><br>#}
-    <h3 class="center-align">Family App :</h3><br><h3 class="center-align">4 Fonctions pour organiser sa famille.</h3><br>
+<h3 class="center-align">Family App :</h3><br>
+<h3 class="center-align">4 Fonctions pour organiser sa famille.</h3><br>
 
         {#<div class="container center-align"><br><br>#}
             {#<div class="row">#}
@@ -34,23 +35,22 @@
                 {#</div>#}
             {#</div>#}
         {#</div>#}
+
     <div class="container center-align col s12 m12 l12">
 
-            <div class="card-panel ">
+        <div class="card-panel ">
 
-                <img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone">
-                <span class="card-title">Phone listings :</span>
+            <img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone">
+            <span class="card-title">Phone listings :</span>
 
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
+            <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
             </div>
-
-
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
 
         <div class="card-panel ">
 
@@ -66,8 +66,6 @@
             </div>
         </div>
 
-
-
         <div class="card-panel ">
 
             <img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time">
@@ -81,8 +79,6 @@
                 <a href="#">This is a link</a>
             </div>
         </div>
-
-
 
         <div class="card-panel ">
 
@@ -100,7 +96,7 @@
 
     </div>
 
-</div>
+{#</div>#}
 
 
         {#<div id="f1_container">#}
@@ -115,9 +111,5 @@
             {#</div>#}
         {#</div>#}
 
-
-{% endblock %}
-{% block footer %}
-<!--Ajout du lien interne vers le Footer-->
-{% include "@Family/Default/footer.html.twig"  %}
+    {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}

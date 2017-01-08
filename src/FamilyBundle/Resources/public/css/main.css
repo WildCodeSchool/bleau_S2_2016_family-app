@@ -6,7 +6,9 @@
 // 4. Responsive
 ---------------------*/
 html, body { height: 100%; margin: 0; padding: 0; }
+
 #map { height: 25%; }
+
 #save-widget {
     width: 300px;
     box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
@@ -17,15 +19,22 @@ html, body { height: 100%; margin: 0; padding: 0; }
     margin: 15px;
 }
 
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /*body {*/
     /*background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/72900/blueleaf.jpg')!important;*/
     /*background-attachment: fixed!important;*/
     /*background-size: cover!important;*/
 /*}*/
 
-#calendar {
-    max-width: 900px;
-    margin: 0 auto;
+body {
+    background-color: #BFBFBB;
+    background-image: url("../images/bord.gif") !important;
+    background-position: center top;
+    background-repeat: repeat-y;
 }
 
 footer{
@@ -39,6 +48,10 @@ footer{
     width: 100%;
     position:absolute;
     bottom:0px;
+    background-color: #BFBFBB;
+    background-image: url("../images/bord.gif") !important;
+    background-position: center top;
+    background-repeat: repeat-y;
 }
 /************************************
 *                                   *
@@ -82,8 +95,8 @@ a:active {
 
 .imgmenu
 {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 /*.background-image {*/
     /*margin:0;*/
@@ -109,7 +122,12 @@ a:active {
 *            3. NAV                 *
 *                                   *
 ************************************/
-
+nav {
+    background-color: #BFBFBB;
+    background-image: url("../images/bord.gif") !important;
+    background-position: center top;
+    background-repeat: repeat-y;
+}
 .nav_bar_logo, .nav_bar_burger{
     height: 100%;
 
