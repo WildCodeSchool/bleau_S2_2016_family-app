@@ -1,3 +1,4 @@
+#----------- FamilyAppBundle -----------------------
 family_homepage:
     path:     /homepage
     defaults: { _controller: FamilyBundle:Default:index }
@@ -27,8 +28,7 @@ family_login:
     path:     /
     defaults: { _controller: FamilyBundle:Security:login}
 
-#----------- FOS USER BUNDLE SECURITY -----------------------
-
+#----------- FOS USER BUNDLE SECURITY ---------------------------------------
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
@@ -49,5 +49,6 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
+#----------- FOS JsRouting -------------------------------------------------
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

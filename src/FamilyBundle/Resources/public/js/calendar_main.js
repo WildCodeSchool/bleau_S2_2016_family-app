@@ -2,122 +2,75 @@
  * Created by baur on 12/12/16.
  */
 
+
+
 $(document).ready(function() {
 
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,basicWeek,basicDay'
-        },
-        defaultDate: '2016-12-12',
-        navLinks: true, // can click day/week names to navigate views
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    var calendar = $('#calendar').fullCalendar({
+
         editable: true,
-        eventLimit: true, // allow "more" link when too many events
-        events: [
-            {
-                title: 'All Day Event',
-                start: '2016-12-01'
-            },
-            {
-                title: 'Long Event',
-                start: '2016-12-07',
-                end: '2016-12-10'
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2016-12-09T16:00:00'
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2016-12-16T16:00:00'
-            },
-            {
-                title: 'Conference',
-                start: '2016-12-11',
-                end: '2016-12-13'
-            },
-            {
-                title: 'Meeting',
-                start: '2016-12-12T10:30:00',
-                end: '2016-12-12T12:30:00'
-            },
-            {
-                title: 'Lunch',
-                start: '2016-12-12T12:00:00'
-            },
-            {
-                title: 'Meeting',
-                start: '2016-12-12T14:30:00'
-            },
-            {
-                title: 'Happy Hour',
-                start: '2016-12-12T17:30:00'
-            },
-            {
-                title: 'Dinner',
-                start: '2016-12-12T20:00:00'
-            },
-            {
-                title: 'Birthday Party',
-                start: '2016-12-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'http://google.com/',
-                start: '2016-12-28'
+
+        events: "http://localhost/bleau_S2_2016_family-app/src/FamilyBundle/Resources/views/Default/events.php",
+        selectable: true,
+        selectHelper: true,
+        select: function(start, end, allDay) {
+            var title = prompt('Event Title:');
+            if (title) {
+                start = $.fullCalendar.formatDate(start, "yyyy-MM-dd HH:mm:ss");
+                end = $.fullCalendar.formatDate(end, "yyyy-MM-dd HH:mm:ss");
+                $.ajax({
+                    url: 'http://localhost/bleau_S2_2016_family-app/src/FamilyBundle/Resources/views/Default/add_events.php',
+                    data: 'title='+ title+'&start='+ start +'&end='+ end ,
+                    type: "POST",
+                    success: function(json) {
+                        alert('OK');
+                    }
+                });
+                calendar.fullCalendar('renderEvent',
+                    {
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: allDay
+                    },
+                    true // make the event "stick"
+                );
             }
-        ]
+            calendar.fullCalendar('unselect');
+        },
+        editable: true,
+        eventDrop: function(event, delta) {
+            start = $.fullCalendar.formatDate(event.start, "yyyy-MM-dd HH:mm:ss");
+            end = $.fullCalendar.formatDate(event.end, "yyyy-MM-dd HH:mm:ss");
+            $.ajax({
+                url: 'http://localhost/bleau_S2_2016_family-app/src/FamilyBundle/Resources/views/Default/update_events.php',
+                data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
+                type: "POST",
+                success: function(json) {
+                    alert("OK");
+                }
+            });
+        },
+        eventResize: function(event) {
+            start = $.fullCalendar.formatDate(event.start, "yyyy-MM-dd HH:mm:ss");
+            end = $.fullCalendar.formatDate(event.end, "yyyy-MM-dd HH:mm:ss");
+            $.ajax({
+                url: 'http://localhost/bleau_S2_2016_family-app/src/FamilyBundle/Resources/views/Default/update_events.php',
+                data: 'title='+ event.title+'&start='+ start +'&end='+ end +'&id='+ event.id ,
+                type: "POST",
+                success: function(json) {
+                    alert("OK");
+                }
+            });
+
+        }
     });
 
 });
 
-// $(document).ready(function() {
-//
-//
-//     /* initialize the external events
-//      -----------------------------------------------------------------*/
-//
-//     $('#external-events .fc-event').each(function() {
-//
-//         // store data so the calendar knows to render an event upon drop
-//         $(this).data('event', {
-//             title: $.trim($(this).text()), // use the element's text as the event title
-//             stick: true // maintain when user navigates (see docs on the renderEvent method)
-//         });
-//
-//         // make the event draggable using jQuery UI
-//         $(this).draggable({
-//             zIndex: 999,
-//             revert: true,      // will cause the event to go back to its
-//             revertDuration: 0  //  original position after the drag
-//         });
-//
-//     });
-//
-//
-//     /* initialize the calendar
-//      -----------------------------------------------------------------*/
-//
-//     $('#calendar').fullCalendar({
-//         header: {
-//             left: 'prev,next today',
-//             center: 'title',
-//             right: 'month,agendaWeek,agendaDay'
-//         },
-//         editable: true,
-//         droppable: true, // this allows things to be dropped onto the calendar
-//         drop: function() {
-//             // is the "remove after drop" checkbox checked?
-//             if ($('#drop-remove').is(':checked')) {
-//                 // if so, remove the element from the "Draggable Events" list
-//                 $(this).remove();
-//             }
-//         }
-//     });
-//
-//
-// });
 

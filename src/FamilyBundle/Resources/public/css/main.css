@@ -7,7 +7,11 @@
 ---------------------*/
 html, body { height: 100%; margin: 0; padding: 0; }
 
-#map { height: 25%; }
+#map {
+    height: 35%;
+    width: 55%;
+
+}
 
 #save-widget {
     width: 300px;
@@ -20,7 +24,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 }
 
 #calendar {
-    max-width: 900px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -31,6 +35,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 /*}*/
 
 body {
+    color: blue !important;
     background-color: #BFBFBB;
     background-image: url("../images/bord.gif") !important;
     background-position: center top;
@@ -59,7 +64,14 @@ footer{
 *                                   *
 ************************************/
 
-
+.collapsible-header{
+    overflow: hidden;
+    width: auto;
+    background-color: #BFBFBB;
+    background-image: url("../images/bord.gif") !important;
+    background-position: center top;
+    background-repeat: repeat-y;
+}
 
 /* unvisited link */
 a:link {
@@ -127,7 +139,11 @@ nav {
     background-image: url("../images/bord.gif") !important;
     background-position: center top;
     background-repeat: repeat-y;
+    box-shadow: none !important;
+
 }
+
+
 .nav_bar_logo, .nav_bar_burger{
     height: 100%;
 

@@ -3,17 +3,17 @@
 {% block stylesheet%}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
 
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">#}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 {% endblock %}
 
 
 {% block body %}
-
+    <div class="row col s12 m6 l6 center">
     {% include "@Family/Default/nav.html.twig"  %}
     <h1>Phone Listings :</h1>
 
-    <table class="bordered highlight responsive-table centered">
+    <table class="col s12 m6 l6 offset-l3 bordered highlight responsive-table centered">
         <thead>
         <tr>
             <th data-field="id">Nom</th>
@@ -51,5 +51,5 @@
 {#{% endblock %}#}
 
     {% include "@Family/Default/footer.html.twig"  %}
-
+        </div>
 {% endblock %}
