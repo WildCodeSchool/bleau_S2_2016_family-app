@@ -47,6 +47,11 @@ FamilyBundle\Entity\User:
         anniversaire:
             type: date
             column: Anniversaire
-
+#    oneToOne:
+#        start:
+#            targetEntity: FamilyBundle\Entity\Evenement
+#            joinColumn:
+#            name: user_anniversaire
+#            referencedColumnName: anniversaire
 
     lifecycleCallbacks: {  }

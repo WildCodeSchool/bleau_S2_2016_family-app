@@ -29,9 +29,17 @@ class RegistrationFormType extends AbstractType
             ->add('box', null, array('label' => 'Tel Internet'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
-            ->add('anniversaire',null, array('label' => 'Anniversaire'));
-    }
+//            ->add('anniversaire',null, array('label' => 'Anniversaire',
+//                'required' => false,
+//                'data' => new \DateTime("01/01/1980")));
+            ->add('anniversaire', DateType::class, array(
+                'widget' => 'single_text',
+                'html5' => false,
+                'attr' => ['class' => 'datepicker'],
+        ));
 
+    }
+    
     public function getParent()
     {
         return 'FOS\UserBundle\Form\Type\RegistrationFormType';

@@ -12,6 +12,7 @@
 namespace FamilyBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class ProfileFormType extends AbstractType
@@ -27,7 +28,10 @@ class ProfileFormType extends AbstractType
             ->add('box', null, array('label' => 'Tel Internet'))
             ->add('code_postal', null, array('label' => 'Code_Postal'))
             ->add('ville', null, array('label' => 'Ville'))
-            ->add('anniversaire', null, array('label' => 'Anniversaire'))
+            ->add('anniversaire', DateType::class, array(
+                'widget' => 'single_text',
+                'html5' => false,
+                'attr' => ['class' => 'datepicker']))
             ->add('current_password', 'password', array(
                 'mapped' => false
             ));

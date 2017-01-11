@@ -18,10 +18,5 @@ FamilyBundle\Entity\Evenement:
         end:
             type: datetime
             nullable: true
-    oneToOne:
-        User:
-            targetEntity: FamilyBundle\Entity\User
-            joinColumn:
-            name: user_anniversaire
-            referencedColumnName: anniversaire
+
     lifecycleCallbacks: {  }

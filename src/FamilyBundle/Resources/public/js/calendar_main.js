@@ -12,9 +12,7 @@ $(document).ready(function() {
     var y = date.getFullYear();
 
     var calendar = $('#calendar').fullCalendar({
-
-        editable: true,
-
+        
         events: "http://localhost/bleau_S2_2016_family-app/src/FamilyBundle/Resources/views/Default/events.php",
         selectable: true,
         selectHelper: true,
