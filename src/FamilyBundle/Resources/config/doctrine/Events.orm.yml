@@ -1,0 +1,30 @@
+FamilyBundle\Entity\Events:
+    type: entity
+    table: null
+    repositoryClass: FamilyBundle\Repository\EventsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        start:
+            type: datetime
+        end:
+            type: datetime
+        titre:
+            type: string
+            length: 255
+        contenu:
+            type: string
+            length: 255
+        color:
+            type: string
+            length: 255
+        add_home_actu:
+            type: boolean
+
+
+
+    lifecycleCallbacks: {  }

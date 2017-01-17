@@ -1,3 +1,4 @@
+
 /*--- INDEX  ----
 
 01- Html,Body
@@ -8,10 +9,18 @@
 06-Images
 07-Responsive
 08-Input
+09-Material-icons
+10-Tableau Materialize
 
 ---------------*/
 
-/*1-Html***********************************************************/
+.btn{
+    border-radius: 25px;
+}
+
+
+
+/*1-Html ***********************************************************/
 
 html, body { height: 100%; margin: 0; padding: 0; }
 
@@ -50,7 +59,7 @@ footer{
     box-shadow: none !important;
 }
 
-/*2-Nav***********************************************************/
+/*2-Nav ***********************************************************/
 
 nav {
     background-color: #BFBFBB;
@@ -68,7 +77,7 @@ nav {
     height: 100%;
 }
 
-/*3-G Map***********************************************************/
+/*3-G Map ***********************************************************/
 
 #map {
     height: 35%;
@@ -85,13 +94,13 @@ nav {
     margin: 15px;
 }
 
-/*4-FullCalendar*****************************************************/
+/*4-FullCalendar *****************************************************/
 #calendar {
     max-width: 900px;
     margin: 0 auto;
 }
 
-/*5-A Link***********************************************************/
+/*5-A Link ***********************************************************/
 
 /* unvisited link */
 a:link {
@@ -118,7 +127,7 @@ a:active {
     color: purple !important;
 }
 
-/*6-Image***********************************************************/
+/*6-Image ***********************************************************/
 
 .imgmenu
 {
@@ -126,8 +135,14 @@ a:active {
     height: 60px;
 }
 
+.imgindex
+{
+width: 50%;
 
-/*7-Responsive*******************************************************/
+}
+
+
+/*7-Responsive ******************************************************/
 
 
 /* Vue responsive */
@@ -146,7 +161,7 @@ a:active {
 
 }
 
-/*8-Input***********************************************************/
+/*8-Input **********************************************************/
 
 .input-field label {
     color: #0080FF !important;
@@ -202,4 +217,41 @@ a:active {
     transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0.2s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+/*9- Material-Icons ***********************************************************/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons.o { color: #FB8C00; }
+
+/*10-Tableaux Materialize ***********************************************************/
+
+th{ /*pour les entete*/
+    background-color: #0a0101;
+    color: #ff1c1a;
+}
+
+tr{ /*pour les lignes*/
+    background-color: #b8b7ff;
 }

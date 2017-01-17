@@ -10,17 +10,17 @@
 
 {% block body %}
 
-<div class="row col s12 m6 l6 center">
+<div class="row col s12 m12 l12 center">
         {% include "@Family/Default/nav.html.twig"  %}
     <h1>Countdown Listings :</h1>
-
-    <table class="col s12 m6 l6 offset-l3 bordered highlight responsive-table centered">
+</div> <div class="container"><div class="row">
+    <table class="col s12 m6 l6 offset-l3 bordered highlight  centered">
         <thead>
         <tr>
             <th data-field="id">Nom</th>
             <th data-field="name">Prenom</th>
             <th data-field="price">Anniversaire</th>
-            <th data-field="price">Reste nb de jrs</th>
+            <th data-field="price">Jours restants</th>
         </tr>
         </thead>
 
@@ -35,7 +35,29 @@
         {% endfor %}
         </tbody>
     </table>
+    <div class="row col s12 m12 l12 center">
     {% include "@Family/Default/footer.html.twig"  %}
-    </div>
+</div>
+<div class="row col s12 m12 l12 center">
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+</div>
+
+</div></div>
+
+
+    {#---master---#}
+    {#<div class="center preloader-wrapper active ">#}
+
 {% endblock %}
 
+ {% block js %}
+     <script type="text/javascript" src="{{ asset('bundles/family/js/main.js') }}"></script>
+ {% endblock %}

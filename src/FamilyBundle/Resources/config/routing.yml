@@ -52,3 +52,14 @@ fos_user_change_password:
 #----------- FOS JsRouting -------------------------------------------------
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+
+
+#----------- Calendar -------------------------------------------------
+#calendar_events:
+#    resource: "@FamilyBundle/Resources/config/routing/events.yml"
+#    prefix:   /events
+
+#calendar_homepage:
+#    path:     /calendar
+#defaults: { _controller: FamilyBundle:Default:calendar }

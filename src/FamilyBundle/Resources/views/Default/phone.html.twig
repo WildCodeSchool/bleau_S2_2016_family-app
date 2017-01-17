@@ -9,11 +9,12 @@
 
 
 {% block body %}
+
     <div class="row col s12 m6 l6 center">
     {% include "@Family/Default/nav.html.twig"  %}
-    <h1>Phone Listings :</h1>
-
-    <table class="col s12 m6 l6 offset-l3 bordered highlight responsive-table centered">
+    <h1>Phone Listings :</h1></div>
+        <div class="container"><div class="row">
+    <table class="col s12 m6 l6 offset-l3 bordered highlight centered">
         <thead>
         <tr>
             <th data-field="id">Nom</th>
@@ -49,7 +50,8 @@
 
     {#<link rel="stylesheet" href="{{ asset('bundles/family/css/mobbern.css') }}">#}
 {#{% endblock %}#}
-
+            </div></div>
+    <div class="row col s12 m6 l6 center">
     {% include "@Family/Default/footer.html.twig"  %}
-        </div>
+      </div>
 {% endblock %}

@@ -18,7 +18,7 @@ class DefaultController extends Controller
 
     public function calendarAction()
     {
-        return $this->render('@Family/Default/agenda-views.html.twig');
+        return $this->render('@Family/Default/calendar.html.twig');
     }
 
     public function timeAction()
