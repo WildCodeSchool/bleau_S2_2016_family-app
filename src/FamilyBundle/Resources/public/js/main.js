@@ -10,12 +10,13 @@ $(document).ready(function() {
     $('.collapsible').collapsible();
     $('.slider').slider();
     $('#calendar').fullCalendar();
-    // $('.datepicker').pickadate({
-    //     selectMonths: true, // Creates a dropdown to control month
-    //     selectYears: 90 // Creates a dropdown of 15 years to control year
-    //
-    // });
+
     $( ".datepicker" ).pickadate({
+        firstDay: 1,
+        // dayNamesShort: [ "Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam" ],
+        // dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 90, // Creates a dropdown of 15 years to control year
         dateFormat: 'dd-mm-yyyy',
         formatSubmit: 'yyyy-mm-dd'
     });
