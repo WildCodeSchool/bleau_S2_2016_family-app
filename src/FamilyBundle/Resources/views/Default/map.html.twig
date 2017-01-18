@@ -3,20 +3,23 @@
 {% block stylesheet%}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
 
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">#}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 {% endblock %}
 
 
 {% block body %}
+
     {% include "@Family/Default/nav.html.twig"  %}
 
+<div class="row center col s12 m6 l6 offset-l3">
     <h1>Maps Events :</h1>
 
-    <div>Reel event</div>
-     <hr />
-    <div id="map"></div>
-     <hr />
+    <div>Reel event</div></div>
+     {#<hr />#}
+    <div id="map" class="row center col s12 m6 l6 offset-l3"></div>
+     {#<hr />#}
+
     <div id="save-widget">
         <strong>Google Sydney</strong>
         <p>We’re located on the water in Pyrmont, with views of the Sydney Harbour Bridge, The
@@ -24,6 +27,7 @@
             "living wall" made of plants, a tire swing, a library with a nap pod and some amazing
             baristas.</p>
     </div>
+
  <script>
 /*
  * This sample uses a custom control to display the SaveWidget. Custom
@@ -82,6 +86,8 @@ function initMap() {
 
 
     {% include "@Family/Default/footer.html.twig"  %}
+
+
 {% endblock %}
 {% block js %}
     <script type="text/javascript">

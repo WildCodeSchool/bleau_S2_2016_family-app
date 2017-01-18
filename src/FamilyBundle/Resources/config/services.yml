@@ -2,3 +2,6 @@ services:
 #    family.example:
 #        class: FamilyBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+#    calendar.example:
+#        class: CalendarBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

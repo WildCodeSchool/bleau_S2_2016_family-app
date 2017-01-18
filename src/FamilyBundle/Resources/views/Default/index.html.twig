@@ -3,7 +3,7 @@
 {% block stylesheet%}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/materialize.min.css') }}" media="screen,projection">
 
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/style.css') }}">#}
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
 {% endblock %}
 
@@ -13,9 +13,47 @@
 <!--Ajout du lien interne vers la NavBar-->
 {% include "@Family/Default/nav.html.twig"  %}
 
-{#<div class="join_view ng-scope"><br>#}
-    <h3 class="center-align">Family App :</h3><br><h3 class="center-align">4 Fonctions pour organiser sa famille.</h3><br>
+{#<div class="join_view ng-scope container row center-align col s12 m12 l12"><br>#}
 
+
+<div class="container">
+    <div class="row">
+
+    <div class="slider offset-s1 col s10 offset-s1  ">
+
+
+        <ul class="slides">
+            <li>
+                <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>The Family App :</h3>
+                    <h5 class="light grey-text text-lighten-3">Démarrer avec</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                <div class="caption left-align">
+                    <h3>4 Fonctions</h3>
+                    <h5 class="light grey-text text-lighten-3">pour organiser sa famille.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                <div class="caption right-align">
+                    <h3>car partout où je vais </h3>
+                    <h5 class="light grey-text text-lighten-3">ma famille est ma force</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>alors n'attendez plus</h3>
+                    <h5 class="light grey-text text-lighten-3">commencer maintenant !</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div></div>
         {#<div class="container center-align"><br><br>#}
             {#<div class="row">#}
                 {#<div class="col s6">#}
@@ -34,73 +72,44 @@
                 {#</div>#}
             {#</div>#}
         {#</div>#}
-    <div class="container center-align col s12 m12 l12">
 
-            <div class="card-panel ">
-
-                <img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone">
-                <span class="card-title">Phone listings :</span>
-
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
+    <div class="row center-align col s12 m12 l12">
 
 
 
-        <div class="card-panel ">
+        <div class="col s6 m6 l4 offset-l2 center">
+            <img src="{{ asset('bundles/family/images/phone.png') }}" class="imgmenu" alt="phone"><br>
+            <span class="card-title">Listing Phones :</span>
+            <p>Listing des numeros de telephone.</p>
 
-            <img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar">
+        </div>
+        <div class="col s6 m6 l4 ">
+            <img src="{{ asset('bundles/family/images/calendar.png') }}" class="imgmenu" alt="calendar"><br>
             <span class="card-title">Calendar Events :</span>
+                <p>Calendrier des fêtes et évènements.</p>
 
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
         </div>
 
-
-
-        <div class="card-panel ">
-
-            <img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time">
+        <div class="col s6 m6 l4 offset-l2 center">
+            <img src="{{ asset('bundles/family/images/time.png') }}" class="imgmenu" alt="time"><br>
             <span class="card-title">CountDown Listings :</span>
+                <p>Listing des anniversaires <br> et decomptes des jours restants .</p>
 
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
         </div>
 
-
-
-        <div class="card-panel ">
-
-            <img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map">
+        <div class="col s6 m6 l4">
+            <img src="{{ asset('bundles/family/images/map.png') }}" class="imgmenu" alt="map"><br>
             <span class="card-title">Maps Events :</span>
+                <p>Listing des maps.</p>
 
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <a href="#">This is a link</a>
-            </div>
         </div>
 
+        <div class="col s12 m12 l12">
+        <img src="{{ asset('bundles/family/images/andy.jpg') }}" class="imgindex" alt="andro">
+        </div>
     </div>
 
-</div>
+{#</div>#}
 
 
         {#<div id="f1_container">#}
@@ -115,9 +124,5 @@
             {#</div>#}
         {#</div>#}
 
-
-{% endblock %}
-{% block footer %}
-<!--Ajout du lien interne vers le Footer-->
-{% include "@Family/Default/footer.html.twig"  %}
+    {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}

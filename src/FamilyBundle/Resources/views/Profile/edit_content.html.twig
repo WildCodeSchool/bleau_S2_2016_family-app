@@ -3,6 +3,7 @@
     <img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo">
 </div>
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+<div class="container ">
 <div class="row form ">
     <div class="col s5 m3 l3"><i class="material-icons prefix">verified_user</i>
         {{ form_label(form.username) }}
@@ -77,4 +78,4 @@
 {#<div class="col s5 m3 l3 center">#}
     <a href="{{ path('family_homepage') }}" class="waves-effect waves-light btn">Retour Homepage</a>
 </div>
-
+</div>

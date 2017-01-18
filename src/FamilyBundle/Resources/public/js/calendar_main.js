@@ -1,123 +1,81 @@
-/**
- * Created by baur on 12/12/16.
- */
-
 $(document).ready(function() {
 
+    var current_date_time = new Date();
+
     $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
+        header: { // Contenu du header
+            left: 'month, agendaWeek',
             center: 'title',
-            right: 'month,basicWeek,basicDay'
+            right: 'today prev, next'
         },
-        defaultDate: '2016-12-12',
-        navLinks: true, // can click day/week names to navigate views
-        editable: true,
-        eventLimit: true, // allow "more" link when too many events
-        events: [
-            {
-                title: 'All Day Event',
-                start: '2016-12-01'
+        lang: 'fr',
+        defaultView: 'month', // vue par default
+        views: { // format d'affichage de la date en fonction des vue
+            month: {
+                titleFormat: 'MMMM YYYY'
             },
-            {
-                title: 'Long Event',
-                start: '2016-12-07',
-                end: '2016-12-10'
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2016-12-09T16:00:00'
-            },
-            {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2016-12-16T16:00:00'
-            },
-            {
-                title: 'Conference',
-                start: '2016-12-11',
-                end: '2016-12-13'
-            },
-            {
-                title: 'Meeting',
-                start: '2016-12-12T10:30:00',
-                end: '2016-12-12T12:30:00'
-            },
-            {
-                title: 'Lunch',
-                start: '2016-12-12T12:00:00'
-            },
-            {
-                title: 'Meeting',
-                start: '2016-12-12T14:30:00'
-            },
-            {
-                title: 'Happy Hour',
-                start: '2016-12-12T17:30:00'
-            },
-            {
-                title: 'Dinner',
-                start: '2016-12-12T20:00:00'
-            },
-            {
-                title: 'Birthday Party',
-                start: '2016-12-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'http://google.com/',
-                start: '2016-12-28'
+            agenda:{
+                titleFormat: 'D MMM YYYY'
             }
-        ]
+        },
+        firstDay: 1, // jour ou l'agenda commentce 1 = lundi, 2 = mardi , etc...
+        weekNumbers: true, // affichage du numéro de la semaine en cour
+        businessHours: { // heure de travail
+            start: '09:00',
+            end: '18:00',
+            dow: [1, 2, 3, 4, 5]
+        },
+        handleWindowResize: true, // redimenssionne auto du calendrier en fonction de la width du navigateur
+        weekends: true, // affichage des weekends
+        allDaySlot: false, // recapitulatif de la journée en haut du calendar
+        slotLabelFormat: 'HH:mm', // format de l'heure sur les slots
+        timeFormat: 'HH:mm',
+        minTime: "08:00:00", // heure de début du calendar
+        maxTime: '20:00:00', // heure de fin du calendar
+        scrollTime: '09:00:00', // heure sur laquelle le calendar pointe par default
+        slotEventOverlap: false, // Les évènements ne se chevauchent pas
+        height: 'auto',
+        forceEventDuration: true, // on oblige le user à mettre une heure de fin à l'evenement
+
+        events: Routing.generate('events'),
+
+        dayClick: function(date) {
+            if (date._d >= current_date_time && roles != null){
+                window.location = Routing.generate('events') + date.format() + '/new';
+            }
+        },
+
+        eventRender: function(event, element, calEvent) {
+            var editEvent = Routing.generate('events') + event.id + '/edit';
+            element.each(function() {
+                element.append(
+                    '</br>' +
+                    '<strong>' +
+                    event.titre +
+                    '</strong>'
+                );
+            })
+        },
+        eventClick:  function(calEvent){
+            var day = moment(calEvent.start._d).format("dddd Do MMMM YYYY");
+            var ponctuation = ' de ';
+            var startTime = moment(calEvent.start._i).format('HH:mm à ');
+            var endTime = moment(calEvent.end._i).format("HH:mm");
+            var Time = 'Le ' + day + ponctuation + startTime + endTime;
+            var editEvent = Routing.generate('events') + calEvent.id + '/edit';
+            var deleteEvent = Routing.generate('events') + calEvent.id + '/delete';
+
+            $('#modalTime').html(Time);
+            $('#modalTitle').html( calEvent.titre );
+            if (calEvent.images.url != null){
+                $('#imgevent').html( '<img src="' + asset + calEvent.images.webPath + '" alt="' + calEvent.images.alt +'"/>' );
+            }
+            $('#fullCalModal').modal();
+
+            $('#delete_event').show();
+            $('#delete_event').attr('href', deleteEvent);
+            $('#edit_event').show();
+            $('#edit_event').attr('href', editEvent);
+        }
     });
-
 });
-
-// $(document).ready(function() {
-//
-//
-//     /* initialize the external events
-//      -----------------------------------------------------------------*/
-//
-//     $('#external-events .fc-event').each(function() {
-//
-//         // store data so the calendar knows to render an event upon drop
-//         $(this).data('event', {
-//             title: $.trim($(this).text()), // use the element's text as the event title
-//             stick: true // maintain when user navigates (see docs on the renderEvent method)
-//         });
-//
-//         // make the event draggable using jQuery UI
-//         $(this).draggable({
-//             zIndex: 999,
-//             revert: true,      // will cause the event to go back to its
-//             revertDuration: 0  //  original position after the drag
-//         });
-//
-//     });
-//
-//
-//     /* initialize the calendar
-//      -----------------------------------------------------------------*/
-//
-//     $('#calendar').fullCalendar({
-//         header: {
-//             left: 'prev,next today',
-//             center: 'title',
-//             right: 'month,agendaWeek,agendaDay'
-//         },
-//         editable: true,
-//         droppable: true, // this allows things to be dropped onto the calendar
-//         drop: function() {
-//             // is the "remove after drop" checkbox checked?
-//             if ($('#drop-remove').is(':checked')) {
-//                 // if so, remove the element from the "Draggable Events" list
-//                 $(this).remove();
-//             }
-//         }
-//     });
-//
-//
-// });
-
