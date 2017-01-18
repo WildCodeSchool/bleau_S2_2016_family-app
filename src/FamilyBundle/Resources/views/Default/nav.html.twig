@@ -53,15 +53,11 @@
 
 
         <ul id="nav-mobile" class="side-nav center">
-            <li><a href="">
-                    <img class="" src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></a></li><br><br>
-            <li><a href="{{ path('family_phone') }}">Phone</a></li><br>
-            <li><a href="{{ path('family_calendar') }}">Calendar</a></li><br>
-            <li><a href="{{ path('family_time') }}">Timer</a></li><br>
-            <li><a href="{{ path('family_map') }}">Map</a></li><br>
-            <li><a href="">Profile</a></li><br>
-            <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li><br>
-
+            <li><img src="{{ asset('bundles/family/images/family.png') }}" alt="logo"></li>
+            <li><a href="{{ path('family_phone') }}">Phone</a></li>
+            <li><a href="{{ path('family_calendar') }}">Calendar</a></li>
+            <li><a href="{{ path('family_time') }}">Timer</a></li>
+            <li><a href="{{ path('family_map') }}">Map</a></li>
         </ul>
 
     </div>

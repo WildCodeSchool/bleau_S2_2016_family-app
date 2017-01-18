@@ -9,7 +9,23 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
     $('.slider').slider();
-    $('#calendar').fullCalendar();
+    $('#calendar').fullCalendar(
+        {
+            lang: 'fr',
+            eventLimit: true,
+            selectable: true,
+            selectHelper: true,
+            editable: true,
+
+            firstDay: 1,
+            weekNumbers: true,
+
+        header: { // Contenu du header
+        left: 'month, agendaWeek, agendaDay',
+            center: 'title',
+            right: 'today prev, next'}}
+
+    );
 
     $( ".datepicker" ).pickadate({
         firstDay: 1,
