@@ -41,7 +41,7 @@ footer{
     line-height: 20px;
     vertical-align: middle;
     width: 100%;
-    position:absolute;
+    position:fixed;
     bottom:0px;
     background-color: #BFBFBB;
     background-image: url("../images/bord.gif") !important;
