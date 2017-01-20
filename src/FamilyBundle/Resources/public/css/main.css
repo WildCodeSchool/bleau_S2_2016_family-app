@@ -25,6 +25,7 @@
 html, body { height: 100%; margin: 0; padding: 0; }
 
 body {
+    cursor:pointer;
     color: blue !important;
     background-color: #BFBFBB;
     background-image: url("../images/bord.gif") !important;
