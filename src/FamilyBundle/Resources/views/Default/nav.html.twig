@@ -5,29 +5,29 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons prefix">menu</i></a>
 
         <ul class="hide-on-med-and-down">
-            <div class="row">
-                <div class="col s4 center">
+            <div class="row center s12">
+                <div class="col s3 center ">
                     <a href="{{ path('family_homepage') }}"><img class="brand-logo nav_bar_logo" src="{{ asset('bundles/family/images/family.png') }}" alt="logo" title="Homepage"></a>
                 </div>
+
                 <div class="col s1">
-                    <a href="{{ path('family_phone') }}"><img src="{{ asset('bundles/family/images/phone.png') }}" class="brand-logo nav_bar_logo" alt="phone" title="Phone"></a>
+                    <a href="{{ path('family_phone') }}"><img  class="brand-logo nav_bar_logo" alt="phone" title="Phone" src="{{ asset('bundles/family/images/phonea.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/phoneb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/phonea.png') }}'"></a>
                 </div>
                 <div class="col s1">
-                    <a href="{{ path('family_calendar') }}"><img src="{{ asset('bundles/family/images/calendar.png') }}" class="brand-logo nav_bar_logo" alt="calendar" title="Calendar"></a>
+                    <a href="{{ path('family_calendar') }}"><img  class="brand-logo nav_bar_logo" alt="calendar" title="Calendar" src="{{ asset('bundles/family/images/calendara.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/calendarb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/calendara.png') }}'"></a>
+                </div>
+                <div class="col s1">
+                    <a href="{{ path('family_time') }}"><img  class="brand-logo nav_bar_logo" alt="time" title="Time" src="{{ asset('bundles/family/images/counta.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/countb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/counta.png') }}'"></a>
+                </div>
+                <div class="col s1">
+                    <a href="{{ path('family_map') }}"><img  class="brand-logo nav_bar_logo" alt="map" title="Map" src="{{ asset('bundles/family/images/mapa.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/mapb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/mapa.png') }}'"></a>
+                </div>
+                <div class="col s1">
+                    <a href="{{ path('fos_user_profile_show') }}"><img class="brand-logo nav_bar_logo" alt="profile" title="Profile" src="{{ asset('bundles/family/images/profilea.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/profileb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/profilea.png') }}'"></a>
                 </div>
 
                 <div class="col s1">
-                    <a href="{{ path('family_time') }}"><img src="{{ asset('bundles/family/images/time.png') }}" class="brand-logo nav_bar_logo" alt="time" title="Time"></a>
-                </div>
-                <div class="col s1">
-                    <a href="{{ path('family_map') }}"><img src="{{ asset('bundles/family/images/map.png') }}" class="brand-logo nav_bar_logo" alt="map" title="Map"></a>
-                </div>
-                <div class="col s1">
-                    <a href="{{ path('fos_user_profile_show') }}"><img class="brand-logo nav_bar_logo" alt="profile" title="Profile" src="{{ asset('bundles/family/images/profile.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/p3.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/profile.png') }}'"></a>
-                </div>
-
-                <div class="col s1">
-                    <a href="{{ path('fos_user_security_logout') }}"><img src="{{ asset('bundles/family/images/logout.png') }}" class="brand-logo nav_bar_logo" alt="logout" title="Logout"></a>
+                    <a href="{{ path('fos_user_security_logout') }}"><img  class="brand-logo nav_bar_logo" alt="logout" title="Logout" src="{{ asset('bundles/family/images/logouta.png') }}" onmouseover="this.src='{{ asset('bundles/family/images/logoutb.png') }}'" onmouseout="this.src='{{ asset('bundles/family/images/logouta.png') }}'"></a>
                 </div>
 
                 {#<div class="col s1 ">#}
