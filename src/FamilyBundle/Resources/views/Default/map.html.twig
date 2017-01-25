@@ -59,11 +59,18 @@ function initMap() {
     }
   });
 
+//    https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR0BbHRUnLKTDjKllsr4gMZkF_l8GZXfFE_Ws5C68MHMY1H1Jsk
 
-
-
-  var marker = new google.maps.Marker({
+    var markerImage= new google.maps.MarkerImage(
+            "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR0BbHRUnLKTDjKllsr4gMZkF_l8GZXfFE_Ws5C68MHMY1H1Jsk",
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(42, 42)
+    );
+    var marker = new google.maps.Marker({
     map: map,
+    icon: markerImage,
     position: saveWidget.getPlace().location,
 
   });
