@@ -48,8 +48,8 @@ FamilyBundle\Entity\User:
             type: date
             column: Anniversaire
 #    oneToOne:
-#        start:
-#            targetEntity: FamilyBundle\Entity\Evenement
+#        User:
+#            targetEntity: FamilyBundle\Entity\Event
 #            joinColumn:
 #            name: user_anniversaire
 #            referencedColumnName: anniversaire

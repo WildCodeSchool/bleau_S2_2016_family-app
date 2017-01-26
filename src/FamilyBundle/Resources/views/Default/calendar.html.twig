@@ -17,29 +17,30 @@
 	{% include "@Family/Default/nav.html.twig"  %}
 	<br><br>
 
-
-
 	<div id='calendar'></div>
 
-	<!-- Modal Structure -->
-	<div id="fullCalModal" class="modal modal-fixed-footer">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
-			<h6 style="color:white" id="modalTime" class="modal-title"></h6>
-		</div>
-		<div class="modal-header">
-			<h6 style="color: white" id="modalTitle" class="modal-title"></h6>
-		</div>
-		<div class="modal-content">
-			<h4>Modal Header</h4>
-			<p>A bunch of text</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" id="delete_event" class="btn btn-default">Supprimer</a>
-			<a href="#" id="edit_event" class="btn btn-primary">Modifier</a>
+	<div class="row">
+		<div class="col s12 center">
+			<!-- Modal Structure -->
+			<div id="fullCalModal" class="modal modal-corps">
+
+				<div class="modal-header">
+					<h6 style="color:white" id="modalTime" class="modal-title"></h6>
+				</div>
+
+				<div class="modal-content">
+					<h4>Modal Header</h4>
+					<p>A bunch of text</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" id="delete_event" class="btn btn-default">Supprimer</a>
+					<a href="#" id="edit_event" class="btn btn-primary">Modifier</a>
+				</div>
+			</div><br>
+
 		</div>
 	</div>
-	<a class="waves-effect waves-light btn" href="#fullCalModal">Modal</a>
+	
 
 	{% include "@Family/Default/footer.html.twig"  %}
 
@@ -52,5 +53,6 @@
 	<script src="{{ asset('bundles/family/js/fullcalendar.min.js') }}"></script>
 	<script src="{{ asset('bundles/family/js/calendar_main.js') }}"></script>
 	<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+	<script src="{{ asset('bundles/family/js/main.js') }}"></script>
 	<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
 {% endblock %}

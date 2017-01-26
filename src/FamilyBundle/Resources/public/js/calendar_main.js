@@ -6,7 +6,7 @@ $(document).ready(function() {
         header: { // Contenu du header
             left: 'month, agendaWeek',
             center: 'title',
-            right: 'today prev, next'
+            right: 'today, prev, next'
         },
         lang: 'fr',
         defaultView: 'month', // vue par default
@@ -64,7 +64,8 @@ $(document).ready(function() {
             var editEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/edit';
             var deleteEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/delete';
 
-            $('#fullCalModal').modal();
+            console.log('mama');
+            $('#fullCalModal').modal('open');
             $('#modalTime').html(Time);
             $('#modalTitle').html( calEvent.titre );
             $('#delete_event').show();

@@ -1,16 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+{% include "@Family/Default/nav.html.twig"  %}
+
+<div class="container">
+    <div class="row">
+        <div class="col m8 offset-m2">
     <h1>Event edit</h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+            <div class="row">
+                <div class="col m6">
+                    {{ form_widget(edit_form) }}
+                </div>
+                <div class="col m6">
+                    <input type="submit" value="Edit" />
+                        {{ form_end(edit_form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <ul>
         <li>
             <a href="{{ path('family_calendar') }}">Retourner au calendrier</a>
         </li>
     </ul>
+
+    {% include "@Family/Default/footer.html.twig"  %}
 {% endblock %}
