@@ -12,8 +12,23 @@
     {{ form_start(edit_form) }}
             <div class="row">
                 <div class="col m6">
-                    {{ form_widget(edit_form) }}
+                    {{ form_widget(edit_form.start) }}
                 </div>
+                <div class="col m6">
+                    {{ form_widget(edit_form.end) }}
+                </div>
+            </div>
+
+            <div class="row">
+                {{ form_label(edit_form.titre) }}
+                {{ form_widget(edit_form.titre) }}
+                {{ form_errors(edit_form.titre) }}
+            </div>
+            <div>
+                {{ form_label(edit_form.color) }}
+                {{ form_widget(edit_form.color, {'id': 'colorpicker'}) }}
+                {{ form_errors(edit_form.color) }}
+            </div>
                 <div class="col m6">
                     <input type="submit" value="Edit" />
                         {{ form_end(edit_form) }}
@@ -30,4 +45,19 @@
     </ul>
 
     {% include "@Family/Default/footer.html.twig"  %}
+{% endblock %}
+
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+        $(function() {
+            $('#colorpicker').colorpicker({
+                format: 'hex',
+                color: '#A44097'
+            });
+        });
+    </script>
+    <script type="text/javascript" src="{{ asset('bundles/family/js/colorpicker.min.js') }}"></script>
 {% endblock %}

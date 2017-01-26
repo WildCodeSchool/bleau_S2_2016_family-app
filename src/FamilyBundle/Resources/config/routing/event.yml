@@ -11,13 +11,13 @@ event_edit:
 event_delete:
     path:     /{id}/delete
     defaults: { _controller: "FamilyBundle:Event:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]
 
 
 #Route pour afficher nos events dans le calendrier
 #On l'expose grace à FOSJSRouting afin que notre configuration de FullCalendar puisse l'utiliser
 eventsShowOnCalendar:
-    path:     /events
+    path:     /
     defaults: { _controller: "FamilyBundle:Event:showEventOnCalendar" }
     methods:  GET
     options:

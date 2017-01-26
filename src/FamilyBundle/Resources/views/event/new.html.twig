@@ -26,7 +26,7 @@
                 </div>
                 <div>
                     {{ form_label(form.color) }}
-                    {{ form_widget(form.color) }}
+                    {{ form_widget(form.color, {'id': 'colorpicker'}) }}
                     {{ form_errors(form.color) }}
                 </div>
                 <input type="submit" value="Créer" />
@@ -43,4 +43,19 @@
 
     {% include "@Family/Default/footer.html.twig"  %}
 
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+        $(function() {
+            $('#colorpicker').colorpicker({
+                format: 'hex',
+                color: '#A44097'
+            });
+        });
+    </script>
+    <script type="text/javascript" src="{{ asset('bundles/family/js/colorpicker.min.js') }}"></script>
 {% endblock %}
