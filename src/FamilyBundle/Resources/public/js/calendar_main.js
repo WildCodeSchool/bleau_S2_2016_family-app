@@ -6,7 +6,7 @@ $(document).ready(function() {
         header: { // Contenu du header
             left: 'month, agendaWeek',
             center: 'title',
-            right: 'today prev, next'
+            right: 'today, prev, next'
         },
         lang: 'fr',
         defaultView: 'month', // vue par default
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 titleFormat: 'D MMM YYYY'
             }
         },
-        firstDay: 1, // jour ou l'agenda commentce 1 = lundi, 2 = mardi , etc...
+        firstDay: 1, // jour ou l'agenda commence 1 = lundi, 2 = mardi , etc...
         weekNumbers: true, // affichage du numéro de la semaine en cour
         businessHours: { // heure de travail
             start: '09:00',
@@ -36,17 +36,17 @@ $(document).ready(function() {
         slotEventOverlap: false, // Les évènements ne se chevauchent pas
         height: 'auto',
         forceEventDuration: true, // on oblige le user à mettre une heure de fin à l'evenement
+        
 
-        events: Routing.generate('events'),
+        events: Routing.generate('eventsShowOnCalendar'),
 
         dayClick: function(date) {
-            if (date._d >= current_date_time && roles != null){
-                window.location = Routing.generate('events') + date.format() + '/new';
+            if (date._d >= current_date_time){
+                window.location = Routing.generate('eventsShowOnCalendar') + date.format() + '/new';
             }
         },
 
-        eventRender: function(event, element, calEvent) {
-            var editEvent = Routing.generate('events') + event.id + '/edit';
+        eventRender: function(event, element) {
             element.each(function() {
                 element.append(
                     '</br>' +
@@ -62,16 +62,13 @@ $(document).ready(function() {
             var startTime = moment(calEvent.start._i).format('HH:mm à ');
             var endTime = moment(calEvent.end._i).format("HH:mm");
             var Time = 'Le ' + day + ponctuation + startTime + endTime;
-            var editEvent = Routing.generate('events') + calEvent.id + '/edit';
-            var deleteEvent = Routing.generate('events') + calEvent.id + '/delete';
+            var editEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/edit';
+            var deleteEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/delete';
 
+
+            $('#fullCalModal').modal('open');
             $('#modalTime').html(Time);
             $('#modalTitle').html( calEvent.titre );
-            if (calEvent.images.url != null){
-                $('#imgevent').html( '<img src="' + asset + calEvent.images.webPath + '" alt="' + calEvent.images.alt +'"/>' );
-            }
-            $('#fullCalModal').modal();
-
             $('#delete_event').show();
             $('#delete_event').attr('href', deleteEvent);
             $('#edit_event').show();

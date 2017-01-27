@@ -1,3 +1,7 @@
+family_event:
+    resource: "@FamilyBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+
 #----------- FamilyAppBundle -----------------------
 family_homepage:
     path:     /homepage
@@ -49,17 +53,10 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
+
+
 #----------- FOS JsRouting -------------------------------------------------
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 
-
-#----------- Calendar -------------------------------------------------
-#calendar_events:
-#    resource: "@FamilyBundle/Resources/config/routing/events.yml"
-#    prefix:   /events
-
-#calendar_homepage:
-#    path:     /calendar
-#defaults: { _controller: FamilyBundle:Default:calendar }

@@ -4,12 +4,8 @@
 {% block stylesheet %}
 {{ parent() }}
 
-
 <link rel="stylesheet" href="{{ asset('bundles/family/css/fullcalendar.min.css') }}">
-<link rel="stylesheet" media="print" href="{{ asset('bundles/family/css/fullcalendar.print.min.css') }}">
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/calendar_main.css') }}">
-<link type="text/css" rel="stylesheet" href="{{ asset('bundles/family/css/main.css') }}">
-
 
 {% endblock %}
 
@@ -21,32 +17,34 @@
 	{% include "@Family/Default/nav.html.twig"  %}
 	<br><br>
 
-
-
 	<div id='calendar'></div>
 
-	<div id="fullCalModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
+
+
+
+
+	<div class="row">
+		<div class="col s12 center">
+			<!-- Modal Structure -->
+			<div id="fullCalModal" class="modal modal-corps">
+
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
-					<h6 style="color:white" id="modalTime" class="modal-title"></h6>
-				</div>
-				<div class="modal-header">
-					<h6 style="color: white" id="modalTitle" class="modal-title"></h6>
+					<h6 style="color:blue" id="modalTime" class="modal-title"></h6>
+					<h5 id="modalTitle" class="modal-title"></h5>
 				</div>
 
-				<div style="color:white" id="modalBody" class="modal-body">
-					<p id="text_event"></p>
-					<div id="imgevent"></div>
+				<div class="modal-content">
+
+					<h6 id="modalTime" class="modal-body"></h6>
 				</div>
 				<div class="modal-footer">
-					{% if is_granted("ROLE_SUPER_ADMIN") %}
-						<a href="#" id="delete_event" class="btn btn-default">Supprimer</a>
-						<a href="#" id="edit_event" class="btn btn-primary">Modifier</a>
-					{% endif %}
+
+						{#<i class="material-icons md-48 bouton-delete">delete_sweep</i>#}
+					<a href="#" id="delete_event" class="btn btn-default">Supprimer</a>
+					<a href="#" id="edit_event" class="btn btn-primary">Modifier</a>
 				</div>
-			</div>
+			</div><br>
+
 		</div>
 	</div>
 
@@ -55,3 +53,13 @@
 
 {% endblock %}
 
+{% block js %}
+	{{ parent() }}
+
+	<script src="{{ asset('bundles/family/js/moment.min.js') }}"></script>
+	<script src="{{ asset('bundles/family/js/fullcalendar.min.js') }}"></script>
+	<script src="{{ asset('bundles/family/js/calendar_main.js') }}"></script>
+	<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+	<script src="{{ asset('bundles/family/js/main.js') }}"></script>
+	<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+{% endblock %}

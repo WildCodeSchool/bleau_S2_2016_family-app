@@ -4,12 +4,15 @@
 
 
 $(document).ready(function() {
+
+  
     $('select').material_select();
     // Ini Menu burger 
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
     $('.slider').slider();
-    $('#calendar').fullCalendar();
+
+    $('.modal').modal();
 
     $( ".datepicker" ).pickadate({
         firstDay: 1,

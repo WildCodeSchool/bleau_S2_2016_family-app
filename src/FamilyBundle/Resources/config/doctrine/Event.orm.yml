@@ -1,7 +1,7 @@
-FamilyBundle\Entity\Events:
+FamilyBundle\Entity\Event:
     type: entity
     table: null
-    repositoryClass: FamilyBundle\Repository\EventsRepository
+    repositoryClass: FamilyBundle\Repository\EventRepository
     id:
         id:
             type: integer
@@ -16,15 +16,7 @@ FamilyBundle\Entity\Events:
         titre:
             type: string
             length: 255
-        contenu:
-            type: string
-            length: 255
         color:
             type: string
             length: 255
-        add_home_actu:
-            type: boolean
-
-
-
     lifecycleCallbacks: {  }

@@ -30,6 +30,7 @@ security:
                 default_target_path: /homepage
                 target_path_parameter: _target_path
                 use_referer: false
+
             logout:       true
             anonymous:    true
 

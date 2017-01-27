@@ -1,55 +1,62 @@
 <?php
+
 namespace FamilyBundle\Entity;
+
 /**
- * Events
+ * Event
  */
-class Events
+class Event
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
+
     /**
      * @var \DateTime
      */
     private $start;
+
     /**
      * @var \DateTime
      */
     private $end;
+
     /**
      * @var string
      */
     private $titre;
-    /**
-     * @var string
-     */
-    private $contenu;
+
     /**
      * @var string
      */
     private $color;
+
+
     /**
      * Get id
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
         return $this->id;
     }
+
     /**
      * Set start
      *
      * @param \DateTime $start
      *
-     * @return Events
+     * @return Event
      */
     public function setStart($start)
     {
         $this->start = $start;
+
         return $this;
     }
+
     /**
      * Get start
      *
@@ -59,18 +66,21 @@ class Events
     {
         return $this->start;
     }
+
     /**
      * Set end
      *
      * @param \DateTime $end
      *
-     * @return Events
+     * @return Event
      */
     public function setEnd($end)
     {
         $this->end = $end;
+
         return $this;
     }
+
     /**
      * Get end
      *
@@ -80,18 +90,21 @@ class Events
     {
         return $this->end;
     }
+
     /**
      * Set titre
      *
      * @param string $titre
      *
-     * @return Events
+     * @return Event
      */
     public function setTitre($titre)
     {
         $this->titre = $titre;
+
         return $this;
     }
+
     /**
      * Get titre
      *
@@ -101,39 +114,21 @@ class Events
     {
         return $this->titre;
     }
-    /**
-     * Set contenu
-     *
-     * @param string $contenu
-     *
-     * @return Events
-     */
-    public function setContenu($contenu)
-    {
-        $this->contenu = $contenu;
-        return $this;
-    }
-    /**
-     * Get contenu
-     *
-     * @return string
-     */
-    public function getContenu()
-    {
-        return $this->contenu;
-    }
+
     /**
      * Set color
      *
      * @param string $color
      *
-     * @return Events
+     * @return Event
      */
     public function setColor($color)
     {
         $this->color = $color;
+
         return $this;
     }
+
     /**
      * Get color
      *
@@ -143,54 +138,5 @@ class Events
     {
         return $this->color;
     }
-    /**
-     * @var \CmsBundle\Entity\Images
-     */
-    private $images;
-    /**
-     * Set images
-     *
-     * @param \CmsBundle\Entity\Images $images
-     *
-     * @return Events
-     */
-    public function setImages(\CmsBundle\Entity\Images $images = null)
-    {
-        $this->images = $images;
-        return $this;
-    }
-    /**
-     * Get images
-     *
-     * @return \CmsBundle\Entity\Images
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
-    /**
-     * @var boolean
-     */
-    private $add_home_actu;
-    /**
-     * Set addHomeActu
-     *
-     * @param boolean $addHomeActu
-     *
-     * @return Events
-     */
-    public function setAddHomeActu($addHomeActu)
-    {
-        $this->add_home_actu = $addHomeActu;
-        return $this;
-    }
-    /**
-     * Get addHomeActu
-     *
-     * @return boolean
-     */
-    public function getAddHomeActu()
-    {
-        return $this->add_home_actu;
-    }
 }
+
