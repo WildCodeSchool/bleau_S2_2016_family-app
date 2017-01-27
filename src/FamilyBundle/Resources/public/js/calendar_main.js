@@ -36,6 +36,7 @@ $(document).ready(function() {
         slotEventOverlap: false, // Les évènements ne se chevauchent pas
         height: 'auto',
         forceEventDuration: true, // on oblige le user à mettre une heure de fin à l'evenement
+        
 
         events: Routing.generate('eventsShowOnCalendar'),
 
@@ -64,7 +65,7 @@ $(document).ready(function() {
             var editEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/edit';
             var deleteEvent = Routing.generate('eventsShowOnCalendar') + calEvent.id + '/delete';
 
-            console.log('mama');
+
             $('#fullCalModal').modal('open');
             $('#modalTime').html(Time);
             $('#modalTitle').html( calEvent.titre );

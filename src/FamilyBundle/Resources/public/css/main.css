@@ -380,11 +380,15 @@ nav {
 }
 
 #fullCalModal {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 230px;
     border-radius: 22px;
+
 }
 
+.modal .modal-footer .btn{
+    float: none !important;
+}
 /*5-A Link ***********************************************************/
 
 /* unvisited link */
