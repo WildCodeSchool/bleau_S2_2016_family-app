@@ -23,7 +23,7 @@ Puis entrer la commande suivante :
 
 ###Remarques :###
 
-Projet n°4 : fictif pour la www.wildcodeschool.fr.
+Projet Personnel n°4 pour la www.wildcodeschool.fr.
 
 
 
