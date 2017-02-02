@@ -28,7 +28,11 @@ class DefaultController extends Controller
 
     public function mapAction()
     {
-        return $this->render('@Family/Default/map.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('FamilyBundle:User')->findAll();
+        return $this->render('@Family/Default/map.html.twig', array(
+            'users' => $users
+        ));
     }
 
     public function mentionAction()

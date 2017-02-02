@@ -47,6 +47,14 @@ FamilyBundle\Entity\User:
         anniversaire:
             type: date
             column: Anniversaire
+        lat:
+            type: string
+            lenght: 255
+        lng:
+            type: string
+            lenght: 255
+
+
 #    oneToOne:
 #        User:
 #            targetEntity: FamilyBundle\Entity\Event

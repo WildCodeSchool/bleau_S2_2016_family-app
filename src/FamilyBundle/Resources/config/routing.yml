@@ -42,7 +42,7 @@ fos_user_profile:
     prefix: /profile
 
 fos_user_register:
-    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    resource: "routing/register.xml"
     prefix: /register
 
 fos_user_resetting:

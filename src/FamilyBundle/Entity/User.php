@@ -308,4 +308,62 @@ class User extends BaseUser
     {
         return $this->anniversaire;
     }
+    /**
+     * @var integer
+     */
+    private $lat;
+
+    /**
+     * @var integer
+     */
+    private $lng;
+
+
+    /**
+     * Set lat
+     *
+     * @param integer $lat
+     *
+     * @return User
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+
+        return $this;
+    }
+
+    /**
+     * Get lat
+     *
+     * @return integer
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Set lng
+     *
+     * @param integer $lng
+     *
+     * @return User
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+
+        return $this;
+    }
+
+    /**
+     * Get lng
+     *
+     * @return integer
+     */
+    public function getLng()
+    {
+        return $this->lng;
+    }
 }
